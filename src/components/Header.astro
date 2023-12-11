@@ -3,38 +3,59 @@
 ---
 
 <div class="header">
-    		
-    		<div class="stickynumber">
-      			<b class="tlf">+299 525690</b>
-      			<b class="mon-fri">(Mon-Fri 09:00-13:00 GMT-2)</b>
-      			<img class="phonelogo" alt="Phone logo" src="../public/imgs/PHONELOGO.svg">
-    		</div>
-            
+  <div class="stickynumber">
+    <b class="tlf">+299 525690</b>
+    <b class="mon-fri">(Mon-Fri 09:00-13:00 GMT-2)</b>
+    <img
+      class="phonelogo"
+      alt="Phone logo"
+      src="../public/imgs/PHONELOGO.svg"
+    />
+  </div>
 
-            <a class="home" href="home">HOME</a>
-            <a class="tours" href="tours">TOURS</a>
-            <a class="about" href="about">ABOUT</a>
-    		<a class="contact" href="contact">CONTACT</a>
-    		<a href=""><img class="someimg" alt="Instagram, Facebook and Youtube logo" src="../public/imgs/SoMe.svg"></a>
-			
-    		<div class="logo">
-      			<img alt="Sisimiut Private Boat Safari logo - a boat" src="../public/imgs/SPBFLOGO.svg">
-    		</div>
-            
-            <img class="heroimg" alt="Hero image of Sisimiut" src="../public/imgs/solsisi.jpg">
-    		<h2 class="herotext">Find your destination</h2>
-  	</div>
+  <div class="grid_1-1-1-1-1-1">
+    <div class="logo">
+      <img
+        alt="Sisimiut Private Boat Safari logo - a boat"
+        src="../public/imgs/SPBFLOGO.svg"
+      />
+    </div>
+    <a class="home" href="home">HOME</a>
+    <a class="tours" href="tours">TOURS</a>
+    <a class="about" href="about">ABOUT</a>
+    <a class="contact" href="contact">CONTACT</a>
+    <a href=""
+      ><img
+        class="someimg"
+        alt="Instagram, Facebook and Youtube logo"
+        src="../public/imgs/SoMe.svg"
+      /></a
+    >
+  </div>
+
+  <img
+    class="heroimg"
+    alt="Hero image of Sisimiut"
+    src="../public/imgs/solsisi.jpg"
+  />
+  <h2 class="herotext">Find your destination</h2>
+</div>
 
 <style>
-    body{
+  body {
     margin: 0;
     padding: 0;
-}
-	.heroimg {
+  }
+
+  .grid_1-1-1-1-1-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  .heroimg {
     position: absolute;
     height: 70%;
     width: 100%;
-   
+
     right: 0%;
     bottom: 0%;
     left: 0%;
@@ -42,8 +63,8 @@
     overflow: hidden;
     max-height: 100%;
     object-fit: cover;
-}
-.herotext {
+  }
+  .herotext {
     position: absolute;
     right: 50%;
     top: 50%;
@@ -52,9 +73,9 @@
     line-height: 150%;
     font-weight: 700;
     color: #fff;
-}
+  }
 
-.tlf {
+  .tlf {
     position: absolute;
     height: 100%;
     width: 40%;
@@ -64,103 +85,66 @@
     line-height: 150%;
     display: flex;
     align-items: center;
-}
+  }
 
-.mon-fri {
-    position: absolute;
-    height: 65%;
-    width: 55%;
-    top: 17%;
-    left: 65%;
+  .mon-fri {
+   
+  
+   
     font-size: 15px;
     letter-spacing: -0.02em;
     line-height: 150%;
     display: flex;
     align-items: center;
-}
+  }
 
-.phonelogo {
-    position: absolute;
-    height: 55%;
-    top: 20%;
-    right: 93%;
-    bottom: 11%;
-    left: 40%;
+  .phonelogo {
+ 
+   
     max-width: 100%;
     overflow: hidden;
     max-height: 100%;
-}
+  }
 
-.stickynumber {
-    position: absolute;
-    top: 0%;
+  .stickynumber {
+    
     font-size: 19px;
     width: 100%;
-    bottom: 92%;
     background-color: #ddf4fe;
-}
+  }
 
-.about, .tours, .home, .contact {
-    position: absolute;
-    letter-spacing: -0.02em;
-    line-height: 150%;
-    font-weight: 500;
+  .about,
+  .tours,
+  .home,
+  .contact {
     cursor: pointer;
-}
+  }
 
-.about {
-    top: 15%;
-    left: 56%;
-}
-
-.tours {
-    top: 15%;
-    left: 44%;
-}
-
-.home {
-    top: 15%;
-    left: 31%;
-}
-
-.contact {
-    top: 15%;
-    left: 68%;
-}
-
-.someimg {
-    position: absolute;
+  .someimg {
+    
     height: 5%;
     width: 7%;
-    top: 15%;
-    right: 9%;
-    bottom: 80%;
-    left: 83%;
+   
     max-width: 100%;
     overflow: hidden;
     max-height: 100%;
-}
+  }
 
-.logo {
-    position: absolute;
+  .logo {
+    
     height: 15%;
     width: 21%;
-    top: 11%;
-    right: 72.5%;
-    bottom: 74%;
-    left: 7%;
+   
     color: #c8102e;
-}
+  }
 
-.header {
-    position: relative;
+  .header {
+   
     width: 100%;
     height: 550px;
-    text-align: left;
+   
     font-size: 23px;
     color: #000;
     font-family: Inter;
-}
-
-
+  }
 </style>
