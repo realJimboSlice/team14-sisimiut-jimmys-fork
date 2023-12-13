@@ -1,0 +1,19 @@
+---
+const {data} = Astro.props;
+---
+
+<div class="card-container">
+    <div class="card-image-container">
+        <img src={data.card_img_src} alt="Card Image">
+        <div class="tag type-of-tour">{data.tag_typeoftour}</div>
+        <div class="tag duration">{data.tag_duration}</div>
+        <div class="tag capacity">{data.tag_capacity}</div>
+    </div>
+    <div class="content-container">
+        <h1>{data.card_location}</h1>
+        <h2>{data.card_name}</h2>
+        <hr>
+        <p>{data.card_description}</p>
+        <button class="centered-button">Read more and book tour</button>
+    </div>
+</div>

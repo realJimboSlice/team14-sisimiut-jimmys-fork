@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.hero-image-container {
+  height: 30vh;
+  overflow: hidden;
+  position: relative;
+  /* margin-bottom: 10vh; */
+}
+
+.hero-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-image-text {
+  position: absolute;
+  color: white;
+  text-align: center;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Inter", sans-serif;
+  font-size: 5vh;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.tour-section {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  background-color: #0a1d37;
+}
+
+.tour-section-heading {
+  /* padding-top: 5vh; */
+  padding-bottom: 2.5vh;
+  text-align: center;
+  color: #fff;
+  font-style: italic;
+}
+
+.all-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 10px;
+  align-items: stretch;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50vh;
+  height: 60vh;
+  /* max-width: 50vh;
+  max-height: 60vh; */
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.card-image-container {
+  height: 25vh;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+}
+
+.card-image-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.tag {
+  position: absolute;
+  left: 10px;
+  padding: 5px 10px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.type-of-tour {
+  background-color: #c8102e;
+  top: 10px;
+}
+.duration {
+  background-color: #0a1d37;
+  top: 50px;
+}
+.capacity {
+  background-color: #000;
+  top: 90px;
+}
+
+.content-container {
+  background-color: #fff;
+  padding: 20px;
+  flex-grow: 1;
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content-container h1,
+.content-container h2 {
+  height: 4vh;
+  max-height: 10vh;
+  /* overflow: hidden; */
+}
+
+.content-container p {
+  margin-bottom: 20px;
+}
+
+hr {
+  border: 1px solid #ccc;
+  margin: 15px 0;
+}
+
+.centered-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #c8102e;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

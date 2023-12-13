@@ -1,0 +1,45 @@
+---
+
+import Tour_card from "../components/Tour_card.astro"
+import "../styles/tours-overview-style.css";
+
+ const data = await fetch(
+     "https://upiqsxfhchnuzrsxvgbp.supabase.co/rest/v1/sisimiut_private_boat_safari?order=tag_typeoftour.asc",
+     {
+         method : "GET", 
+         headers: {
+             apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVwaXFzeGZoY2hudXpyc3h2Z2JwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDIwMzEwNjgsImV4cCI6MjAxNzYwNzA2OH0.nHtV6LAiYP_CkS_NEPjMxAxV4M_u40bYxUzb46-GjD8" 
+         },
+     }
+ ).then(res => res.json());
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Overview of tours</title>
+	</head>
+
+	<div class="site-container">
+		<div class="hero-image-container">
+			<img src="https://visitgreenland.com/wp-content/uploads/blue-ice-boat-puttut-among-icebergs-near-qooroq-ice-fjord-in-narsarsuaq-02.jpg" alt="">
+			<div class="hero-image-text">
+				<p>Find your destination</p>
+			</div>
+		</div>
+		<section class="tour-section">
+			<div class="tour-section-heading">
+				<h1>Choose diverse guided tours for personalized experiences</h1>
+			</div>
+
+			<div class="all-cards-container">
+				{data.map(tours=>{return <Tour_card data={tours} />})}
+			</div>
+		</section>
+
+	</div>
+</html>
