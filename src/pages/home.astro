@@ -101,13 +101,24 @@ import Footer from '../components/Footer.astro';
     padding-bottom: 2%;
 }
 
-.homeimg{
-   width: 80%;
-    
-}
+
 .bluebox{
     background-color: #0A1D37;
     color: white;
+    padding: 0 8%;
+}
+.grid_1-1 {
+    display: flex;
+    justify-content: center; 
+}
+
+.tourscard .cardtext, 
+.tourscard .homeimg {
+    width: 50%; /* Set both children to take up half the width each */
+}
+
+.homeimg {
+    width: 100%; /* Adjust the width relative to its parent, not the whole page */
 }
 
 .cardtext{
@@ -117,11 +128,8 @@ padding: 2%;
 }
 
 .grid_1-1{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
     display: flex;
-    width: 65%;
+    justify-content: center; 
 }
 
 .viewtoursbtn{
@@ -139,6 +147,14 @@ padding: 2%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.tourscard{
+    padding-bottom: 7%;
+}
+
+.guidecard{
+    padding-bottom: 2%;
 }
 
 </style>
