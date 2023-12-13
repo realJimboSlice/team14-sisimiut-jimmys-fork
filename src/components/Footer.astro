@@ -4,15 +4,15 @@
 
 <div class="footerbox">
     <div class="logo">
-      <img alt="" src="../public/imgs/logowhitetext.svg" />
+      <img tabindex="0" alt="Sisimiut Private Boat Safari logo - a boat (inverted colors)" src="../public/imgs/logowhitetext.svg" />
     </div>
 
     
-    <div class="tours">TOURS</div>
-    <div class="about">ABOUT</div>
-    <div class="contact">CONTACT</div>
+    <a class="tours" href="tours">TOURS</a>
+    <a class="about" href="about">ABOUT</a>
+    <a class="contact" href="contact">CONTACT</a>
 
-    <img class="some" alt="SoMe logos - Instagram, Facebook and Youtube" src="../public/imgs/SoMe.svg" />
+    <img tabindex="0" class="some" alt="SoMe logos - Instagram, Facebook and Youtube" src="../public/imgs/SoMe.svg" />
     
   </div>
 
@@ -20,6 +20,9 @@
 .about, .tours, .home, .contact {
     cursor: pointer;
     margin: 1.5% 0;
+    text-decoration: none;
+    color: white;
+    display: table;
 }
 
 .footerbox{

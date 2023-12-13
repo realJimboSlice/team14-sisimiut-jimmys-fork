@@ -8,38 +8,68 @@ import Footer from '../components/Footer.astro';
 <Header></Header>
 
 <div class="redbox">
-    <h2 class="redboxh2">Journey Beyond the Ice: 
+    <h2 tabindex="0" class="redboxh2">Journey Beyond the Ice: 
     Greenland Boat Safaris, 
     Nature's Spectacle on Arctic Seas!</h2>
 </div>
 
 <div class="bluebox">
     
-    <h2 class="homeh2">Meet your personal guide around Sisimiut</h2>
+    <h2 tabindex="0" class="homeh2">Meet your personal guide around Sisimiut</h2>
 
     <div class="guidecard grid_1-1">
-        <img class="homeimg" src="../public/imgs/janbanemann.png" alt="Picture of your guide - Jan Banemann">
+        <img tabindex="0" class="homeimg" src="../public/imgs/janbanemann.png" alt="Picture of your guide - Jan Banemann">
         <div class="cardtext">
-        <h3>Your guide</h3>
-        <p>Award-winning guide 
+        <h3 tabindex="0">Your guide</h3>
+        <p tabindex="0">Award-winning guide 
             Jan Banemann leads tours in Sisimiut while actively contributing to environmental conservation by cleaning the seas in the area.</p>
     </div>
     </div>
 
-    <h2 class="homeh2">Your private guide to the sea life around Sisimiut</h2>
+    <h2 tabindex="0" class="homeh2">Your private guide to the sea life around Sisimiut</h2>
 
     <div class="tourscard grid_1-1">
         <div class="cardtext">
-        <h3>Discover arctic wonders</h3>
-        <p>Expirience Greenland's coast with 
+        <h3 tabindex="0">Discover arctic wonders</h3>
+        <p tabindex="0">Expirience Greenland's coast with 
             Sisimiut Private Boat Safaris - 
             this year's Tourism Award winner. 
             Join us for an unforgettable journey!</p>
     </div>
-        <img class="homeimg" src="../public/imgs/glaciers.png" alt="Picture of the beautiful sea and glaciers by Sisimiut">
+        <img tabindex="0" class="homeimg" src="../public/imgs/glaciers.png" alt="Picture of the beautiful sea and glaciers by Sisimiut">
+    </div>
+</div>
+
+
+<div class="whitebox">
+    <h2 tabindex="0">Discover personalized adventures with Sisimiut Private Boat Safari.
+        Book today for guided travel to unique destinations.</h2>
     </div>
 
+<div class="whitebox">    
+    <Card
+        href="https://docs.astro.build/"
+        title="Documentation"
+        body="Learn how Astro works and explore the official API docs."
+    />
+    
+    <Card
+        href="https://docs.astro.build/"
+        title="Documentation"
+        body="Learn how Astro works and explore the official API docs."
+    />
+
+    <Card
+        href="https://docs.astro.build/"
+        title="Documentation"
+        body="Learn how Astro works and explore the official API docs."
+    />
 </div>
+
+<div class="whitebox"> 
+    <a class="viewtoursbtn" href="tours">View all tours</a>
+</div>
+ 
 
 <Footer></Footer>
 
@@ -92,6 +122,23 @@ padding: 2%;
     justify-content: center;
     display: flex;
     width: 65%;
+}
+
+.viewtoursbtn{
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: #0A1D37 ;
+    width: 10%;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.whitebox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 </style>
