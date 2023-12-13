@@ -1,0 +1,145 @@
+---
+
+---
+
+<div class="header">
+  <div class="stickynumber">
+    <img
+      class="phonelogo"
+      alt="Phone logo"
+      src="../public/imgs/PHONELOGO.svg"
+    />
+    <b tabindex="0" class="tlf">+299 525690</b>
+    <b tabindex="0" class="mon-fri">(Mon-Fri 09:00-13:00 GMT-2)</b>
+    
+  </div>
+
+  <div class="grid_1-1-1-1-1-1">
+    <div class="logo">
+      <a href="home"><img
+        alt="Sisimiut Private Boat Safari logo - a boat"
+        src="../public/imgs/SPBFLOGO.svg"
+      /></a>
+    </div>
+    <a class="home" href="home">HOME</a>
+    <a class="tours" href="tours">TOURS</a>
+    <a class="about" href="about">ABOUT</a>
+    <a class="contact" href="contact">CONTACT</a>
+    <a href=""
+      ><img
+        class="someimg"
+        alt="Instagram, Facebook and Youtube logo"
+        src="../public/imgs/SoMe.svg"
+      /></a
+    >
+  </div>
+
+  <div class="heroimgdiv">
+  <img tabindex="0"
+    class="heroimg"
+    alt="Hero image of Sisimiut"
+    src="../public/imgs/solsisi.jpg"
+  />
+  
+</div>
+<h2 tabindex="0"         class="herotext">Find your destination</h2>
+</div>
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .grid_1-1-1-1-1-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    place-items: center;
+    margin: 0.55% 6.5%;
+  }
+
+  .grid_1-1-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .heroimgdiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  max-height: 55vh;
+}
+
+.heroimg {
+  width: 100%;
+  object-fit: cover;
+  z-index: -10;
+  margin-top: 5%;
+}
+
+.herotext {
+  position: absolute;
+  top: 42%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  font-size: 2.8vw; 
+  letter-spacing: -0.02em;
+  line-height: 150%;
+  font-weight: 700;
+  color: #fff;
+}
+
+  .tlf {
+    height: 100%;
+    letter-spacing: -0.02em;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    margin: 0 .5%;
+  }
+
+  .mon-fri {
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    margin: 0 0.5%;
+  }
+
+  .phonelogo {
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    margin: 0 0.5%;
+  }
+
+  .stickynumber {
+    display: flex;
+    font-size: 19px;
+    background-color: #ddf4fe;
+    padding: 0.5%;
+    justify-content: center;
+    }
+
+  .about,
+  .tours,
+  .home,
+  .contact {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .logo {
+    padding-top: 5%;
+  }
+
+  .header {
+    width: 100%;
+    font-size: 23px;
+    color: #000;
+    font-family: Inter;
+  }
+</style>
