@@ -53,9 +53,11 @@
 }
 
 .card-container {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-rows: 1fr;
   width: 50vh;
   height: 60vh;
   /* max-width: 50vh;
@@ -68,7 +70,7 @@
 .card-image-container {
   height: 25vh;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   border-radius: 8px 8px 0 0;
 }
 
@@ -108,17 +110,28 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: auto;
+  height: 100%;
 }
 
-.content-container h1,
-.content-container h2 {
-  height: 4vh;
-  max-height: 10vh;
-  /* overflow: hidden; */
+.content-heading-1 h1 {
+  font-size: 20px;
+  font-weight: 700;
 }
 
-.content-container p {
+.content-heading-2 h2 {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.content-description {
   margin-bottom: 20px;
+}
+
+.content-description p {
+  text-align: left;
+  font-size: 15px;
+  max-width: 40ch; /* Max antal tegn per linje */
 }
 
 hr {
