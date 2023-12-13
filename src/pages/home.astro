@@ -5,11 +5,93 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-
-
 <Header></Header>
 
-<h2>HELL AND WELCOME</h2>
-<p>THIS IS OUR SITE</p>
+<div class="redbox">
+    <h2 class="redboxh2">Journey Beyond the Ice: 
+    Greenland Boat Safaris, 
+    Nature's Spectacle on Arctic Seas!</h2>
+</div>
+
+<div class="bluebox">
+    
+    <h2 class="homeh2">Meet your personal guide around Sisimiut</h2>
+
+    <div class="guidecard grid_1-1">
+        <img class="homeimg" src="../public/imgs/janbanemann.png" alt="Picture of your guide - Jan Banemann">
+        <div class="cardtext">
+        <h3>Your guide</h3>
+        <p>Award-winning guide 
+            Jan Banemann leads tours in Sisimiut while actively contributing to environmental conservation by cleaning the seas in the area.</p>
+    </div>
+    </div>
+
+    <h2 class="homeh2">Your private guide to the sea life around Sisimiut</h2>
+
+    <div class="tourscard grid_1-1">
+        <div class="cardtext">
+        <h3>Discover arctic wonders</h3>
+        <p>Expirience Greenland's coast with 
+            Sisimiut Private Boat Safaris - 
+            this year's Tourism Award winner. 
+            Join us for an unforgettable journey!</p>
+    </div>
+        <img class="homeimg" src="../public/imgs/glaciers.png" alt="Picture of the beautiful sea and glaciers by Sisimiut">
+    </div>
+
+</div>
 
 <Footer></Footer>
+
+
+
+
+
+<style>
+.redboxh2{
+    background-color: #c8102e;
+    color: white;
+    font-size: 110%;
+    justify-content: center;
+    display: flex;
+    padding: 7%;
+}
+
+.redbox{
+    width: 500px;
+    max-width: 100%;
+    margin-left: 4%;
+    margin-top: -6%;
+}
+
+.homeh2{
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+
+.homeimg{
+   width: 80%;
+    
+}
+.bluebox{
+    background-color: #0A1D37;
+    color: white;
+}
+
+.cardtext{
+color: white;
+background-color: #c8102e;
+padding: 2%;
+}
+
+.grid_1-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    display: flex;
+    width: 65%;
+}
+
+</style>
