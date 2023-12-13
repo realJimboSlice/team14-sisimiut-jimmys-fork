@@ -62,7 +62,8 @@
   height: 60vh;
   /* max-width: 50vh;
   max-height: 60vh; */
-  margin: 20px auto;
+  margin: 3vh auto;
+  padding: 0 0 5vh 0;
   border: 1px solid #ccc;
   border-radius: 8px;
 }
