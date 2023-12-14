@@ -24,7 +24,7 @@ body {
 
 .hero-image-text {
   position: absolute;
-  color: white;
+  color: #fff;
   text-align: center;
   z-index: 2;
   top: 50%;
@@ -106,10 +106,17 @@ body {
 .tag-img {
   display: flex;
   padding-right: 5px;
+  color: #fff;
 }
 
-.tag img {
+/* .tag img {
   height: 15px;
+  color: #fff;
+} */
+
+.tag-img svg {
+  height: 15px;
+  color: fff;
 }
 
 .type-of-tour {
