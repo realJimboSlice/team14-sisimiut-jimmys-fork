@@ -4,10 +4,18 @@ const {data} = Astro.props;
 
 <div class="card-container">
     <div class="card-image-container">
-        <img src={data.card_img_src} alt="Card Image">
-        <div class="tag type-of-tour">{data.tag_typeoftour}</div>
-        <div class="tag duration">{data.tag_duration}</div>
-        <div class="tag capacity">{data.tag_capacity}</div>
+        <img class="card-image" src={data.card_img_src} alt="Card Image">
+        <div class="tag type-of-tour">
+            <div class="tag-text">{data.tag_typeoftour}</div>
+        </div>
+        <div class="tag duration">
+            <div class="tag-img"><img src="../public/imgs/clock.svg" alt=""></div>
+            <div class="tag-text">{data.tag_duration}</div>
+        </div>
+        <div class="tag capacity">
+            <div class="tag-img"><img src="../public/imgs/person.svg" alt=""></div>
+            <div class="tag-text">{data.tag_capacity}</div>
+        </div>
     </div>
     <div class="content-container">
         <div class="content-heading-1">
