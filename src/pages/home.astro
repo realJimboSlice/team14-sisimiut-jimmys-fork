@@ -41,34 +41,34 @@ import Footer from '../components/Footer.astro';
 </div>
 
 
-<h2 class="h2homecard" tabindex="0">Discover personalized adventures with Sisimiut Private Boat Safari.</h2>
-<h2 class="h2homecard" tabindex="0">Book today for guided travel to unique destinations.</h2>
+<h2 class="h2home" tabindex="0">Discover personalized adventures with Sisimiut Private Boat Safari.</h2>
+<h2 class="h2home" tabindex="0">Book today for guided travel to unique destinations.</h2>
 
 <div class="whitebox">
     
         <div class="homecard">
             <img class="homecardimg" src="../public/imgs/solsisi.jpg" alt="Picture of one of the tours">
-            <h2>Sisimiut</h2>
-            <h3>Askjasfa - Ghost village</h3>
-            <p>Explore Assaqutaq, a deserted village, May-Sept. 2-hour 
+            <h2 class="h2homecard">Sisimiut</h2>
+            <h3 class="h3homecard">Askjasfa - Ghost village</h3>
+            <p class="phomecard">Explore Assaqutaq, a deserted village, May-Sept. 2-hour 
                 tours reveal the ghost town's history and atmosphere.</p>
             <a class="homecardbtn" href="tours">Read more and book tour</a>
         </div>
 
         <div class="homecard">
             <img class="homecardimg" src="../public/imgs/solsisi.jpg" alt="Picture of one of the tours">
-            <h2>Sisimiut</h2>
-            <h3>Askjasfa - Ghost village</h3>
-            <p>Explore Assaqutaq, a deserted village, May-Sept. 2-hour 
+            <h2 class="h2homecard">Sisimiut</h2>
+            <h3 class="h3homecard">Askjasfa - Ghost village</h3>
+            <p class="phomecard">Explore Assaqutaq, a deserted village, May-Sept. 2-hour 
                 tours reveal the ghost town's history and atmosphere.</p>
             <a class="homecardbtn" href="tours">Read more and book tour</a>
         </div>
 
         <div class="homecard">
             <img class="homecardimg" src="../public/imgs/solsisi.jpg" alt="Picture of one of the tours">
-            <h2>Sisimiut</h2>
-            <h3>Askjasfa - Ghost village</h3>
-            <p>Explore Assaqutaq, a deserted village, May-Sept. 2-hour 
+            <h2 class="h2homecard">Sisimiut</h2>
+            <h3 class="h3homecard">Askjasfa - Ghost village</h3>
+            <p class="phomecard">Explore Assaqutaq, a deserted village, May-Sept. 2-hour 
                 tours reveal the ghost town's history and atmosphere.</p>
             <a class="homecardbtn" href="tours">Read more and book tour</a>
         </div>
@@ -170,9 +170,9 @@ padding: 1% 3%;
     justify-content: center; 
 }
 
-.h2homecard{
-    justify-content: center;
+.h2home{
     display: flex;
+    justify-content: center;
 }
 
 .homecard{
@@ -181,10 +181,48 @@ padding: 1% 3%;
     border-style: solid;
     border-radius: 15px;
     border-width: 2px;
+    display: ;
+    justify-content: center;
+    align-items: center;
 }
 
 .homecardimg{
     width: 100%;
     border-radius: 11px 11px 0 0;
+}
+
+.h2homecard{
+    
+    margin: 2% 7.5%;
+    padding: 0;
+}
+
+.h3homecard{
+    border-style: solid;
+    border-width: 0 0 2px 0;
+    width: 85%;
+    margin: 2% 7.5%;
+    
+}
+
+.phomecard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3% 7.5%;
+    width: 85%;
+}
+
+.homecardbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #c8102e;
+    width: 80%;
+    margin: 5% 7%;
+    border-radius: 5px;
+    padding: 3%;
+    text-decoration: underline 1px;
 }
 </style>
