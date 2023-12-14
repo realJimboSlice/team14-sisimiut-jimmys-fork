@@ -1,4 +1,6 @@
 ---
+import "../../styles/tour-details-style.css";
+
 export async function getStaticPaths() {
   const data = await fetch("https://upiqsxfhchnuzrsxvgbp.supabase.co/rest/v1/sisimiut_private_boat_safari",
     {
@@ -11,13 +13,13 @@ export async function getStaticPaths() {
   return data.map((tour) => {
     return {
       params: { url_appendix: tour.url_appendix },
-      props: { myData:tour },
+      props: { tour },
     };
   });
 }
 //Skal fjernes efter tests er færdige
-const {myData} = Astro.props;
-console.log(myData);
+const {tour} = Astro.props;
+console.log(tour);
 
 /* 
 {
@@ -41,6 +43,35 @@ console.log(myData);
   url_appendix: 'atlantic-wolffish-and-halibut-tour' 
   
   */
-
 ---
 
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{tour.card_name}}</title>
+	</head>
+
+	<body>
+		<main>
+			<div class="site-container">
+				<div class="hero-image-container">
+					<img src={tour.card_img_src} alt="">
+					<div class="hero-image-text">
+						<p>{tour.card_img_src}</p>
+					</div>
+				</div>
+				<section class="tour-section">
+					<div class="tour-section-heading">
+						<h1>Choose diverse guided tours for personalized experiences</h1>
+					</div>
+					<div class="all-cards-container">
+						
+					</div>
+				</section>
+			</div>
+		</main>
+	</body>
+</html>
