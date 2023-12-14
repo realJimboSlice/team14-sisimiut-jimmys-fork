@@ -9,11 +9,11 @@ const {data} = Astro.props;
             <div class="tag-text">{data.tag_typeoftour}</div>
         </div>
         <div class="tag duration">
-            <div class="tag-img"><img src="../public/imgs/clock.svg" alt=""></div>
+            <div class="tag-img"><img src="../imgs/clock.svg" alt=""></div>
             <div class="tag-text">{data.tag_duration}</div>
         </div>
         <div class="tag capacity">
-            <div class="tag-img"><img src="../public/imgs/person.svg" alt=""></div>
+            <div class="tag-img"><img src="../imgs/person.svg" alt=""></div>
             <div class="tag-text">{data.tag_capacity}</div>
         </div>
     </div>
@@ -28,6 +28,6 @@ const {data} = Astro.props;
         <div class="content-description">
             <p>{data.card_description}</p>
         </div>
-        <button class="centered-button">Read more and book tour</button>
+        <a href={`tours/${data.url_appendix}`}><button class="centered-button">Read more and book tour</button></a>
     </div>
 </div>
