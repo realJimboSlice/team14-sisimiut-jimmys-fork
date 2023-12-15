@@ -25,7 +25,6 @@ import "../styles/tours-overview-style.css";
 	</head>
 
 	<body>
-		<main>
 			<div class="site-container">
 				<div class="hero-image-container">
 					<img src="https://visitgreenland.com/wp-content/uploads/blue-ice-boat-puttut-among-icebergs-near-qooroq-ice-fjord-in-narsarsuaq-02.jpg" alt="">
@@ -33,16 +32,17 @@ import "../styles/tours-overview-style.css";
 						<p>Find your destination</p>
 					</div>
 				</div>
-				<section class="tour-section">
-					<div class="tour-section-heading">
-						<h1>Choose diverse guided tours for personalized experiences</h1>
-					</div>
-					<div class="all-cards-container">
-						{data.map(tours=>{return <Tour_card data={tours} />})}
-					</div>
-				</section>
+				<main>
+					<section class="tour-section">
+						<div class="tour-section-heading">
+							<h1>Choose diverse guided tours for personalized experiences</h1>
+						</div>
+						<div class="all-cards-container">
+							{data.map(tours=>{return <Tour_card data={tours} />})}
+						</div>
+					</section>
+				</main>
 			</div>
-		</main>
 	</body>
 </html>
 

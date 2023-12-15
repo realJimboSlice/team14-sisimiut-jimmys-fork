@@ -43,8 +43,7 @@ body {
 }
 
 .tour-section-heading {
-  /* padding-top: 5vh; */
-  padding-bottom: 2.5vh;
+  padding-bottom: 40px;
   text-align: center;
   color: #fff;
   font-style: italic;
