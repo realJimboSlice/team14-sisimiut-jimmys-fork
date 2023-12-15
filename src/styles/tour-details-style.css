@@ -167,4 +167,17 @@ body {
 
 /* Hero-followup, Priser og Booking slut */
 
-/*  */
+/* Tour-details start*/
+
+.tour-details-container {
+  background-color: #ddf4fe;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px 40px;
+}
+
+.tour-details-container li {
+  padding: 10px 0px;
+}
+
+/* Tour-details slut */
