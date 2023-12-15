@@ -173,11 +173,19 @@ body {
   background-color: #ddf4fe;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 20px 40px;
+  padding: 20px 50px;
+  column-gap: 20px;
+  align-items: center;
+}
+
+/* Bullet points */
+
+.tour-details-container ul {
+  padding-left: 1vh;
 }
 
 .tour-details-container li {
-  padding: 10px 0px;
+  padding: 20px 0px;
 }
 
 /* Tour-details slut */
