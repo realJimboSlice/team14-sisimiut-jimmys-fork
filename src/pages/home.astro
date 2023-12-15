@@ -9,7 +9,7 @@ import Footer from '../components/Footer.astro';
 <Header></Header>
 <div class="hero-image-container">
     <img tabindex="0" alt="Hero image of Sisimiut"
-      src="../public/imgs/solsisi.jpg"
+      src="https://i.ibb.co/VwQ2P0T/332378864-904652684004746-18939413797938788-n2.png"
     />
     </div>
 
@@ -102,7 +102,7 @@ import Footer from '../components/Footer.astro';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
 .hero-image-container {
-  height: 50vh;
+  height: 55vh;
   overflow: hidden;
   position: relative;
   z-index: -10;
@@ -120,6 +120,7 @@ import Footer from '../components/Footer.astro';
     justify-content: center;
     display: flex;
     padding: 5%;
+    font-style: italic;
 }
 
 .redbox{
@@ -295,5 +296,23 @@ font-size: 2vw;
 a{
     text-decoration: none;
     color: black;
+}
+
+@media only screen and (max-width: 1350px) {
+  .h2home {
+    font-size: 2.5vw;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+    .hero-image-container {
+  height: 30vh;
+}
+}
+
+@media only screen and (max-width: 650px) {
+    .hero-image-container {
+  height: 20vh;
+}
 }
 </style>
