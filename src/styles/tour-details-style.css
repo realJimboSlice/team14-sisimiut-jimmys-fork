@@ -29,25 +29,29 @@ body {
 /* Tour-intro start */
 
 .tour-intro-container {
-  padding: 5vh 5vh;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   position: absolute;
   z-index: 2;
   background-color: #c8102e;
-  top: 20vh;
-  left: 10vh;
+  bottom: 50px;
+  left: 60px;
   color: #fff;
 }
 
 .tour-location h1 {
-  font-size: 2.5vh;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .tour-name h2 {
-  font-size: 4vh;
-  font-weight: 500;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.tour-name {
+  padding-bottom: 15px;
 }
 
 .tag-container {
