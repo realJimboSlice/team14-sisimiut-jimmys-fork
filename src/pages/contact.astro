@@ -10,10 +10,10 @@ import Footer from '../components/Footer.astro';
 <div class="grid_1-1">
 
     <div class="redbox">
-        <h2>Contact information:</h2>
-        <h3>+299 525690 (Mon-Fri 09:00-13:00 GMT-2)</h3>
-        <h3>E-mail : janbanemann@outlook.dk</h3>
-        <h3>For a price estimate, please fill out the form</h3>
+        <h1>Contact information:</h2>
+        <h2>+299 525690 (Mon-Fri 09:00-13:00 GMT-2)</h3>
+        <h2>E-mail : janbanemann@outlook.dk</h3>
+        <h2>For a price estimate, please fill out the form</h3>
     </div>
 
 
@@ -29,20 +29,52 @@ import Footer from '../components/Footer.astro';
 <Footer></Footer>
 
 <style>
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+}
+    
 .grid_1-1{
 display: grid;
 grid-template-columns: 1fr 1fr;
 background-color: #0A1D37;
-padding: 8%;
+padding: 40px 40px;
+gap: 20px;
 }
 
+/* Contact info start */
 .redbox{
     color: white;
     background-color: #c8102e;
-    padding: 1% 5%;
-    width: 70%;
+    padding: 10px 10px;
+    width: 600px;
+    align-items: center;
+    justify-content: center;
 }
 
+.redbox h1 {
+    font-size: 35px;
+    padding-top: 0px;
+    font-style: italic;
+}
 
+.redbox h2 {
+    font-size: 25px;
+    padding: 10px 0px;
+    font-style: italic
+}
+
+.redbox h2:last-child {
+    padding-bottom: 0px;
+}
+
+/* Contact info slut */
  
 </style>
