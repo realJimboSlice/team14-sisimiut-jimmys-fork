@@ -12,7 +12,7 @@
       alt="Phone logo"
       src="../public/imgs/PHONELOGO.svg"
     />
-    <b tabindex="0" class="tlf">+299 525690</b>
+    <a class="tlf" href="tel:+299 525690">+299 525690</a>
     <b tabindex="0" class="mon-fri">(Mon-Fri 09:00-13:00 GMT-2)</b>
     
   </div>
@@ -79,6 +79,12 @@
     display: flex;
     align-items: center;
     margin: 0 .5%;
+    color: black;
+    text-decoration: none;
+  }
+
+  .tlf:hover{
+    text-decoration: underline;
   }
 
   .mon-fri {
@@ -125,6 +131,11 @@
     padding-top: 5%;
   }
 
-
+  
+@media only screen and (max-width: 1200px) {
+  a{
+    font-size: 1.7vw;
+  }
+}
 
 </style>
