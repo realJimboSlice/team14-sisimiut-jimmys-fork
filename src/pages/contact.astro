@@ -10,10 +10,12 @@ import Footer from '../components/Footer.astro';
 <div class="grid_1-1">
 
     <div class="redbox">
-        <h1>Contact information:</h2>
-        <h2>+299 525690 (Mon-Fri 09:00-13:00 GMT-2)</h3>
-        <h2>E-mail : janbanemann@outlook.dk</h3>
-        <h2>For a price estimate, please fill out the form</h3>
+        <address class="contact-information">
+            <h1>Contact information:</h2>
+            <h2><a href="tel:+299525690">+299 525690</a> (Mon-Fri 09:00-13:00 GMT-2)</h3>
+            <h2>E-mail: <a href="mailto:janbanemann@outlook.dk">janbanemann@outlook.dk</a></h3>
+            <h2>For a price estimate, please fill out the form:</h3>
+        </address>
     </div>
 
 
@@ -53,7 +55,7 @@ gap: 20px;
 .redbox{
     color: white;
     background-color: #c8102e;
-    padding: 10px 10px;
+    padding: 40px 20px;
     width: 600px;
     align-items: center;
     justify-content: center;
@@ -62,17 +64,22 @@ gap: 20px;
 .redbox h1 {
     font-size: 35px;
     padding-top: 0px;
+    padding-bottom: 20px;
     font-style: italic;
 }
 
 .redbox h2 {
     font-size: 25px;
-    padding: 10px 0px;
+    padding: 20px 0px;
     font-style: italic
 }
 
 .redbox h2:last-child {
     padding-bottom: 0px;
+}
+
+.contact-information a {
+    color: #fff;
 }
 
 /* Contact info slut */
