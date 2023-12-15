@@ -53,6 +53,6 @@ body {
 .all-cards-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px 10px;
-  align-items: stretch;
+  gap: 40px 60px;
+  padding: 0 50px;
 }
