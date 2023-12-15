@@ -1,6 +1,4 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
@@ -9,7 +7,42 @@ import Footer from '../components/Footer.astro';
 
 <Header></Header>
 
-<h2>HELL AND WELCOME</h2>
-<p>THIS IS OUR CONTACT SITE</p>
+<div class="grid_1-1">
+
+    <div class="redbox">
+        <h2>Contact information:</h2>
+        <h3>+299 525690 (Mon-Fri 09:00-13:00 GMT-2)</h3>
+        <h3>E-mail : janbanemann@outlook.dk</h3>
+        <h3>For a price estimate, please fill out the form</h3>
+    </div>
+
+
+
+    <form>
+
+      
+      
+    </form>
+
+</div>
 
 <Footer></Footer>
+
+<style>
+.grid_1-1{
+display: grid;
+grid-template-columns: 1fr 1fr;
+background-color: #0A1D37;
+padding: 8%;
+}
+
+.redbox{
+    color: white;
+    background-color: #c8102e;
+    padding: 1% 5%;
+    width: 70%;
+}
+
+
+ 
+</style>
