@@ -165,8 +165,10 @@ hr {
   margin: 15px 0;
 }
 
+/* Read more and book now button */
 .centered-button {
   display: block;
+  text-align: center;
   margin: 0 auto;
   padding: 10px 20px;
   background-color: #c8102e;
@@ -174,5 +176,11 @@ hr {
   font-weight: bold;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
+  /* cursor: pointer; */
+}
+
+/* Read more and book now link */
+.content-container a {
+  color: #fff;
+  text-decoration: none;
 }
