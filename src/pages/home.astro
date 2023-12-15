@@ -1,10 +1,17 @@
 ---
-import Tour_card from '../components/Tour_card.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
 
 <Header></Header>
+<div class="hero-image-container">
+    <img tabindex="0" alt="Hero image of Sisimiut"
+      src="https://i.ibb.co/VwQ2P0T/332378864-904652684004746-18939413797938788-n2.png"
+    />
+    </div>
 
 <div class="redbox">
     <h2 tabindex="0" class="redboxh2">Journey Beyond the Ice: 
@@ -41,15 +48,43 @@ import Footer from '../components/Footer.astro';
     </div>
 </div>
 
+<h2 class="h2home" tabindex="0">Discover personalized adventures with Sisimiut Private Boat Safari.</h2>
+<h2 class="h2home" tabindex="0">Book today for guided travel to unique destinations.</h2>
 
 <div class="whitebox">
-    <h2 tabindex="0">Discover personalized adventures with Sisimiut Private Boat Safari.
-        Book today for guided travel to unique destinations.</h2>
-    </div>
+    
+        <a href="tours"><div class="homecard">
+            <img class="homecardimg" src="../public/imgs/solsisi.jpg" alt="Picture of one of the tours">
+            <h2 class="h2homecard">Sisimiut</h2>
+            <h3 class="h3homecard">Askjasfa - Ghost village</h3>
+            <div class="underlinehome"></div>
+            <p class="phomecard">Explore Assaqutaq, a deserted village, May-Sept. 2-hour 
+                tours reveal the ghost town's history and atmosphere.</p>
+            <a class="homecardbtn" href="tours">Read more and book tour</a>
+        </div></a>
 
-<div class="whitebox">    
-    CARDS HERE
-</div>
+        <a href="tours"><div class="homecard">
+            <img class="homecardimg" src="../public/imgs/solsisi.jpg" alt="Picture of one of the tours">
+            <h2 class="h2homecard">Sisimiut</h2>
+            <h3 class="h3homecard">Askjasfa - Ghost village</h3>
+            <div class="underlinehome"></div>
+            <p class="phomecard">Explore Assaqutaq, a deserted village, May-Sept. 2-hour 
+                tours reveal the ghost town's history and atmosphere.</p>
+            <a class="homecardbtn" href="tours">Read more and book tour</a>
+        </div></a>
+
+        <a href="tours"><div class="homecard">
+            <img class="homecardimg" src="../public/imgs/solsisi.jpg" alt="Picture of one of the tours">
+            <h2 class="h2homecard">Sisimiut</h2>
+            <h3 class="h3homecard">Askjasfa - Ghost village</h3>
+            <div class="underlinehome"></div>
+            <p class="phomecard">Explore Assaqutaq, a deserted village, May-Sept. 2-hour 
+                tours reveal the ghost town's history and atmosphere.</p>
+            <a class="homecardbtn" href="tours">Read more and book tour</a>
+        </div>
+    </div></a>
+
+   
 
 <div class="whitebox"> 
     <a class="viewtoursbtn" href="tours">View all tours</a>
@@ -63,17 +98,33 @@ import Footer from '../components/Footer.astro';
 
 
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+.hero-image-container {
+  height: 55vh;
+  overflow: hidden;
+  position: relative;
+  z-index: -10;
+}
+
+.hero-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .redboxh2{
     background-color: #c8102e;
     color: white;
-    font-size: 110%;
+    font-size: 1.8vw;
     justify-content: center;
     display: flex;
-    padding: 7%;
+    padding: 5%;
+    font-style: italic;
 }
 
 .redbox{
-    width: 500px;
+    width: 40vw;
     max-width: 100%;
     margin-left: 4%;
     margin-top: -6%;
@@ -84,13 +135,17 @@ import Footer from '../components/Footer.astro';
     justify-content: center;
     padding-top: 5%;
     padding-bottom: 2%;
+    font-size: 2vw;
 }
-
 
 .bluebox{
     background-color: #0A1D37;
     color: white;
-    padding: 0 8%;
+    padding: 0.1% 10%;
+    margin-bottom: 5%;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-style: italic;
 }
 
 .cardtext, .homeimg{
@@ -101,29 +156,33 @@ import Footer from '../components/Footer.astro';
 color: white;
 background-color: #c8102e;
 padding: 1% 3%;
+font-size: 2vw;
 }
 
-.viewtoursbtn{
-    padding: 2%;
-    display: flex;
-    justify-content: center;
-    color: white;
-    background-color: #0A1D37;
-    width: 10%;
-    text-decoration: none;
-    border-radius: 10px;
+.cardtext p{
+    font-size: 1.5vw;
+    font-weight: lighter;
+    line-height: 170%;
 }
 
 .readmorebtn{
-    padding: 4% 6%;
+    padding: 4% 0%;
     display: flex;
     justify-content: center;
     color: white;
     background-color: #0A1D37 ;
-    width: 20%;
+    width: 30%;
     text-decoration: none;
     border-radius: 10px;
-    margin-top: 10%;
+    margin-top: 6%;
+    font-size: 1.2vw;
+    font-style: normal;
+}
+
+.readmorebtn:hover{
+    border-style: solid;
+    border-width: 3px;
+    border-color: #ffffff;
 }
 
 .whitebox {
@@ -133,15 +192,147 @@ padding: 1% 3%;
 }
 
 .tourscard{
-    padding-bottom: 7%;
+    padding-bottom: 8%;
     display: flex;
     justify-content: center; 
-    width: 100%;
 }
 
 .guidecard{
     padding-bottom: 2%;
     display: flex;
     justify-content: center; 
+}
+
+.h2home{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    margin-bottom: 0.4%;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.homecard{
+    width: 20%;
+    margin: 0 3%;
+    margin-top: 3%;
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 1px;
+    border-color: #AFAFAF;
+    box-shadow: #AFAFAF 0px 0px 20px;
+}
+
+.homecardimg{
+    width: 100%;
+    border-radius: 11px 11px 0 0;
+}
+
+.h2homecard{
+    margin: 2% 7.5%;
+    padding: 0;
+    font-size: 1.4vw;
+}
+
+.h3homecard{
+    margin: 2% 7.5%;
+    font-size: 1.1vw;
+}
+
+.underlinehome{
+    border-style: solid;
+    border-width: 0 0 1.5px 0;
+    width: 85%;
+    margin: 2% 7.5%;
+}
+
+.phomecard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3% 7.5%;
+    width: 85%;
+    font-size: 1vw;
+    line-height: 140%;
+}
+
+.homecardbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #c8102e;
+    width: 80%;
+    margin: 5% 7%;
+    border-radius: 5px;
+    padding: 4% 3%;
+    text-decoration: underline 1px;
+    font-size: 1vw;
+}
+
+.viewtoursbtn{
+    padding: 1.5%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: #0A1D37;
+    width: 10%;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.5vw;
+    margin: 3%;
+    margin-bottom: 7%;
+}
+
+.viewtoursbtn:hover{
+    text-decoration: underline;
+}
+
+.homecardbtn:hover{
+    color: #0A1D37;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+@media only screen and (max-width: 1350px) {
+  .h2home {
+    font-size: 2.5vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+    .hero-image-container {
+  height: 35vh;
+}
+}
+
+@media only screen and (min-height: 1100px) {
+    .hero-image-container {
+  height: 15vh;
+}
+
+.whitebox{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 2% 25%;
+}
+
+.homecard{
+    width: 95%;
+    margin-bottom: 10%;
+}
+
+.viewtoursbtn{
+    width: 93%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+}
 }
 </style>
