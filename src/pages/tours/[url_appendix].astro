@@ -1,5 +1,6 @@
 ---
 import "../../styles/tour-details-style.css";
+import Slideshow from "../../components/Slideshow.astro";
 
 export async function getStaticPaths() {
   const data = await fetch("https://upiqsxfhchnuzrsxvgbp.supabase.co/rest/v1/sisimiut_private_boat_safari",
@@ -51,7 +52,7 @@ console.log(tour);
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{tour.card_name}}</title>
+		<title>{tour.card_name}</title>
 	</head>
 
 	<body>
@@ -112,9 +113,7 @@ console.log(tour);
                             <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident optio ipsa sint! Neque perferendis veniam at, autem velit, ipsam cum suscipit earum laborum nulla aspernatur, totam exercitationem ducimus? Soluta, architecto?</li>
                             <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio voluptate optio provident explicabo similique porro rem dicta. Reprehenderit esse quis ullam maxime nobis blanditiis, reiciendis dolores rerum fuga quidem explicabo.</li>
                         </ul>
-                    </div>
-                    <div class="slideshow-container">
-                        
+                        <Slideshow></Slideshow>
                     </div>
                 </section>
 			</div>
