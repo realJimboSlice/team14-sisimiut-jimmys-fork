@@ -3,8 +3,13 @@
   padding: 0;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .hero-image-container {
-  height: 30vh;
+  height: 50vh;
   overflow: hidden;
   position: relative;
   /* margin-bottom: 10vh; */
@@ -19,7 +24,7 @@
 
 .hero-image-text {
   position: absolute;
-  color: white;
+  color: #fff;
   text-align: center;
   z-index: 2;
   top: 50%;
@@ -38,8 +43,7 @@
 }
 
 .tour-section-heading {
-  /* padding-top: 5vh; */
-  padding-bottom: 2.5vh;
+  padding-bottom: 40px;
   text-align: center;
   color: #fff;
   font-style: italic;
@@ -48,124 +52,6 @@
 .all-cards-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px 10px;
-  align-items: stretch;
-}
-
-.card-container {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
-  display: grid;
-  grid-template-rows: 1fr;
-  width: 50vh;
-  height: 60vh;
-  /* max-width: 50vh;
-  max-height: 60vh; */
-  margin: 3vh auto;
-  padding: 0 0 5vh 0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-.card-image-container {
-  height: 25vh;
-  position: relative;
-  /* overflow: hidden; */
-  border-radius: 8px 8px 0 0;
-}
-
-.card-image {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px 8px 0 0;
-}
-
-.tag {
-  position: absolute;
-  left: 10px;
-  padding: 5px 10px;
-  color: #fff;
-  font-size: 10px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.tag-text {
-  font-weight: 700;
-}
-
-.tag-img {
-  display: flex;
-  padding-right: 5px;
-}
-
-.tag img {
-  height: 15px;
-}
-
-.type-of-tour {
-  background-color: #c8102e;
-  top: 10px;
-}
-.duration {
-  background-color: #0a1d37;
-  top: 40px;
-}
-
-.capacity {
-  background-color: #000;
-  top: 70px;
-}
-
-.content-container {
-  background-color: #fff;
-  padding: 20px;
-  flex-grow: 1;
-  border-radius: 0 0 8px 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: auto;
-  height: 100%;
-}
-
-.content-heading-1 h1 {
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.content-heading-2 h2 {
-  font-size: 15px;
-  font-weight: 400;
-}
-
-.content-description {
-  margin-bottom: 20px;
-}
-
-.content-description p {
-  text-align: left;
-  font-size: 15px;
-  max-width: 40ch; /* Max antal tegn per linje */
-}
-
-hr {
-  border: 1px solid #ccc;
-  margin: 15px 0;
-}
-
-.centered-button {
-  display: block;
-  margin: 0 auto;
-  padding: 10px 20px;
-  background-color: #c8102e;
-  color: #fff;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  gap: 40px 60px;
+  padding: 0 50px;
 }

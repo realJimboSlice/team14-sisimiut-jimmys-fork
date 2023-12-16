@@ -1,27 +1,86 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+
+let today = new Date().toISOString().substr(0, 10);
+
+/* Set date to seven days in the future */
+/* let sevenDaysFromNow = new Date();
+sevenDaysFromNow.setDate(sevenDaysFromNow.getDate() + 7);
+let sevenDaysFromNowString = sevenDaysFromNow.toISOString().substr(0, 10); */
+
+const data = await fetch(
+     "https://upiqsxfhchnuzrsxvgbp.supabase.co/rest/v1/sisimiut_private_boat_safari?order=tag_typeoftour.asc",
+     {
+         method : "GET", 
+         headers: {
+             apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVwaXFzeGZoY2hudXpyc3h2Z2JwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDIwMzEwNjgsImV4cCI6MjAxNzYwNzA2OH0.nHtV6LAiYP_CkS_NEPjMxAxV4M_u40bYxUzb46-GjD8" 
+         },
+     }
+ ).then(res => res.json());
+ 
 ---
-
-
 
 <Header></Header>
 
 <div class="grid_1-1">
 
     <div class="redbox">
-        <h2>Contact information:</h2>
-        <h3>+299 525690 (Mon-Fri 09:00-13:00 GMT-2)</h3>
-        <h3>E-mail : janbanemann@outlook.dk</h3>
-        <h3>For a price estimate, please fill out the form</h3>
+        <address class="contact-information">
+            <h1>Contact information:</h2>
+            <h2><a href="tel:+299525690">+299 525690</a> (Mon-Fri 09:00-13:00 GMT-2)</h2>
+            <h2>E-mail: <a href="mailto:janbanemann@outlook.dk">janbanemann@outlook.dk</a></h2>
+            <h2>For a price estimate, please fill out the form:</h2>
+        </address>
     </div>
 
-
-
-    <form>
-
-      
-      
+    <form class="tour-signup" name="tour-signup" method="POST" data-netlify="true">
+        <div class="tour-signup-container">
+            <div class="form-input">
+                <label for="tourlist">Tour</label>
+                <select id="tourlist" name="tourlist">
+                    <option value=""></option>
+                    {data.map(item => (
+                        <option value={item.card_name}>{item.card_name}</option>
+                    ))}
+                  </select>
+            </div>
+            <div class="form-input">
+                  <label for="tourdate">Tour Date</label>
+                  <input type="date" id="tourdate" name="tourdate" value={today} min={today} />
+            </div>
+            <div class="form-input">
+                <label for="fname">First name</label>
+                <input type="text" id="fname" name="fname">
+            </div>
+            <div class="form-input">
+                <label for="lname">Last name</label>
+                <input type="text" id="lname" name="lname">
+            </div>
+            <div class="form-input">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-input">
+                <label for="tel">Phone Number</label>
+                <input type="tel" id="tel" name="tel">
+            </div>
+            <div class="form-input">
+                <label for="adults">Nr. of adults</label>
+                <input type="number" id="adults" name="adults">
+            </div>
+            <div class="form-input">
+                <label for="children">Nr. of children</label>
+                <input type="number" id="children" name="children">
+            </div>
+            <div class="form-input">
+                <label for="message">Message</label>
+                <textarea id="message" name="message"></textarea>
+            </div>
+        </div>
+        <div class="send-button">
+            <input type="submit" value="Send">
+        </div>
     </form>
 
 </div>
@@ -29,20 +88,147 @@ import Footer from '../components/Footer.astro';
 <Footer></Footer>
 
 <style>
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Background with 1-1 grid */
 .grid_1-1{
 display: grid;
 grid-template-columns: 1fr 1fr;
 background-color: #0A1D37;
-padding: 8%;
+padding: 80px 40px;
+gap: 20px;
 }
 
+/* Contact info start */
 .redbox{
-    color: white;
+    color: #fff;
     background-color: #c8102e;
-    padding: 1% 5%;
-    width: 70%;
+    padding: 40px 20px;
+    width: 600px;
+    height: fit-content;
 }
 
+.redbox h1 {
+    font-size: 35px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    font-style: italic;
+}
 
- 
+.redbox h2 {
+    font-size: 25px;
+    padding: 20px 0px;
+    font-style: italic
+}
+
+.redbox h2:last-child {
+    padding-bottom: 0px;
+}
+
+.contact-information a {
+    color: #fff;
+}
+
+/* Contact info slut */
+
+/* Forms start */
+
+.tour-signup {
+    display: flex;
+    flex-direction: column;
+}
+
+.tour-signup-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 50px;
+    padding-bottom: 20px;
+}
+
+/* Form labels */
+
+.form-input label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+/* Form input fields */
+.form-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input input, .form-input select{
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    background-color: #0A1D37;
+    color: #fff;
+    padding-left: 10px;
+}
+
+.form-input:last-child {
+    grid-column: span 2;
+}
+
+.form-input textarea {
+    width: 100%;
+    height: 10em;
+    background-color: #0A1D37;
+    color: #fff;
+    padding: 10px;
+    resize: none;
+    border: 1px solid #fff;
+}
+
+/* Send button */
+.send-button {
+    display: block;
+    margin: auto;
+}
+
+.send-button input {
+    background-color: #c8102e;
+    background-color: #c8102e;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    border: 0;
+    border-radius: 8px;
+    padding: 15px 80px;
+}
+
+/* Forms slut */
+
 </style>
+
+<!-- <script>
+
+    Tilføj og rediger hvis der bliver tid SCRIPT TIL AT VALIDERE FORMS INDEN DE BLIVER SENDT TIL NETLIFY
+
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+        // Get form fields
+        var fname = document.getElementById('fname').value;
+        var lname = document.getElementById('lname').value;
+        var email = document.getElementById('email').value;
+        var tel = document.getElementById('tel').value;
+
+        // Validate form fields
+        if (fname === '' || lname === '' || email === '' || tel === '') {
+            alert('All fields must be filled out');
+            event.preventDefault();
+        }
+    });
+</script> -->
