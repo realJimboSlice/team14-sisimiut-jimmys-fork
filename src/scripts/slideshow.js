@@ -65,7 +65,7 @@ for (let i = 0; i < dots.length; i++) {
 }
 
 // Displays the first image immediately on page load
-window.onload.addEventListener("load", () => {
+window.addEventListener("load", () => {
   slides[0].style.display = "block";
   dots[0].className += " active";
   //  startSlideshow();
