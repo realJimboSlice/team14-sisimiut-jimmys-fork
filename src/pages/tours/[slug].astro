@@ -98,13 +98,13 @@ console.log(tour)
                 <div class="hero-followup">
                     <div class="prices-container">
                         <div class="price-box">
-                            <div class="price">1-2 people <span class="price-amount">$333</span></div>
+                            <div class="price">1-2 people <span class="price-amount">{tour.price_one}</span></div>
                         </div>
                         <div class="price-box">
-                            <div class="price">3 people <span class="price-amount">$333</span></div>
+                            <div class="price">3 people <span class="price-amount">{tour.price_two}</span></div>
                         </div>
                         <div class="price-box">
-                            <div class="price">4 people <span class="price-amount">$333</span></div>
+                            <div class="price">4 people <span class="price-amount">{tour.price_three}</span></div>
                         </div>
                     </div>
                     <div class="booktour-container">
@@ -113,11 +113,9 @@ console.log(tour)
                 </div>
                 <section class="tour-details-section">
                     <div class="tour-details-container">
-                        <ul>
-                            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus dolores quod reiciendis ducimus impedit, quisquam eos nostrum perspiciatis laudantium vitae! Eveniet maxime aspernatur rerum est quod exercitationem saepe ad voluptate?</li>
-                            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident optio ipsa sint! Neque perferendis veniam at, autem velit, ipsam cum suscipit earum laborum nulla aspernatur, totam exercitationem ducimus? Soluta, architecto?</li>
-                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio voluptate optio provident explicabo similique porro rem dicta. Reprehenderit esse quis ullam maxime nobis blanditiis, reiciendis dolores rerum fuga quidem explicabo.</li>
-                        </ul>
+                        <article>
+                            <p>{tour.long_description}</p>
+                        </article>
                         <Slideshow></Slideshow>
                     </div>
                 </section>

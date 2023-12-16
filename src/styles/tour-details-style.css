@@ -178,7 +178,7 @@ body {
   background-color: #ddf4fe;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 20px 50px;
+  padding: 40px 50px;
   column-gap: 20px;
   align-items: center;
 }
@@ -194,3 +194,45 @@ body {
 }
 
 /* Tour-details slut */
+
+/* Media queries, responsive design start */
+/* Media queries, responsive design start */
+
+/* Mobile version */
+
+@media screen and (max-width: 768px) {
+  .prices-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .price {
+    margin: 15px 0px;
+  }
+
+  .price-box {
+    margin-right: 0;
+  }
+
+  .tour-details-container {
+    background-color: #ddf4fe;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 40px 50px;
+    column-gap: 20px;
+    align-items: center;
+  }
+
+  /* Changes heading to span from 2 columns to 1 column */
+  .section-heading {
+    grid-column: span 1;
+  }
+  /* Reduces padding of heading by 25% */
+  h2 {
+    font-size: calc(30px * 0.75);
+  }
+  /* Reduces padding of paragraphs by 25% */
+  p {
+    font-size: calc(20px * 0.75);
+  }
+}
