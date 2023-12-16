@@ -20,6 +20,4 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-slideshow.js
 slideshow-html-css-js.html
-src/scripts/
