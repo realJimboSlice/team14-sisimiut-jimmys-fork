@@ -1,16 +1,21 @@
+---
+let { img1, img2, img3 } = Astro.props;
+---
+
+
 <div class="slideshow-container">
     <div class="mySlides fade">
-      <img src="../../../public/imgs/glaciers.png" />
+      <img src={img1} />
       <div class="image-text"><span>Deez One</span></div>
     </div>
 
     <div class="mySlides fade">
-        <img src="../../../public/imgs/solsisi.jpg" />
+        <img src={img2} />
       <div class="image-text"><span>Deez Two</span></div>
     </div>
 
     <div class="mySlides fade">
-      <img src="../../../public/imgs/glaciers.png" />
+      <img src={img3} />
       <div class="image-text"><span>Deez Three</span></div>
     </div>
     <div class="dot-container">
