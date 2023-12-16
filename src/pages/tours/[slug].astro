@@ -1,6 +1,8 @@
 ---
 import "../../styles/tour-details-style.css";
 import Slideshow from "../../components/Slideshow.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
 
 export async function getStaticPaths() {
   const data = await fetch("https://upiqsxfhchnuzrsxvgbp.supabase.co/rest/v1/sisimiut_private_boat_safari",
@@ -13,11 +15,15 @@ export async function getStaticPaths() {
 
   return data.map((tour) => {
     return {
-      params: { url_appendix: tour.url_appendix },
+      params: { slug: tour.slug },
       props: { tour },
     };
   });
 }
+
+const {tour} = Astro.props;
+console.log(tour)
+
 
 /* 
 {
@@ -41,6 +47,7 @@ export async function getStaticPaths() {
   url_appendix: 'atlantic-wolffish-and-halibut-tour' 
   
   */
+
 ---
 
 <html lang="en">
@@ -53,6 +60,7 @@ export async function getStaticPaths() {
 	</head>
 
 	<body>
+        <Header></Header>
 		<main>
 			<div class="site-container">
 				<div class="hero-image-container">
@@ -115,5 +123,6 @@ export async function getStaticPaths() {
                 </section>
 			</div>
 		</main>
+        <Footer></Footer>
 	</body>
 </html>
