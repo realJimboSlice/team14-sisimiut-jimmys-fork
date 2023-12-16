@@ -4,12 +4,329 @@ import Card from '../components/Card.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Overview of tours</title>
+	</head>
 
+	<body>
+		<main>
+			<div class="hero-image-container">
+                <a href="https://ibb.co/Hr5mmn3"><img src="https://i.ibb.co/brcppzD/cd7d08f4-9c98-45e6-a8a4-eddeae958d66.png" alt="cd7d08f4-9c98-45e6-a8a4-eddeae958d66" border="0"></a>
+            </div>
+                    <section class="container">
+                        <div class="p1-h2">
+                        <h2>Meet your guide</h2>
+                        <article>
+                            <p>Jan Banemann, a former carpenter turned eco-conscious guide in Sisimiut, Greenland, leads unique, sustainable tours through the Arctic environment. His company, Sisimiut Boat Safari, emerged from his love for sailing and fishing, attracting diverse tourists.</p>
+                            
+                            <p>Jan's deep understanding of Greenland's culture and nature, gained from his upbringing and local connections, offers an authentic experience.<br> His commitment to the environment is evident in his efforts to clean the seas and reduce his tours' carbon footprint. Jan’s tours are not just adventures; they're educational and conservation-oriented experiences, highlighting his dedication to preserving Greenland's pristine beauty.</p>
+                        </article>
+                    </div>
+                        <section>
+                            <div class="slideshow-container">
+                                <div class="slide fade">
+                                    <img src="https://i.ibb.co/rvkzzn1/327961741-865416751514190-4093255438454424729-n.png" alt="Jan Banemann" border="0">
+                                    <div class="image-text">Jan Banemann</div>
+                                </div>
+                            
+                                <div class="slide fade">
+                                    <img src="https://i.ibb.co/D40dP56/311214054-210816661301929-9120472651182352775-n-2.png" alt="Environmental conservation by the locals and Jan" border="0">
+                                    <div class="image-text">Environmental conservation by the locals and Jan</div>
+                                </div>
 
+                                <div class="slide fade">
+                                    <img src="https://i.ibb.co/j8cdy7n/381226877-353112333739027-7733290882163452830-n.png" alt="The local youth in Sisimiut, giving a helping hand" border="0">
+                                    <div class="image-text">The local youth in Sisimiut, giving a helping hand</div>
+                                </div>
+                        </div>
+                    
+                    <div class="dots-container">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>  
+                </section>  
+            </section>
 
-<Header></Header>
-
-<h2>HELL AND WELCOME</h2>
-<p>THIS IS OUR ABOUT SITE</p>
+        
+<div class="sec2-back-color">
+            <section class="container2">
+                <div id="section-img2">
+                    <img src="https://i.ibb.co/stMy74f/356199823-319216283795299-3362709802950530685-n.jpg" alt="Mountain in Sisimiut" border="0" class="img-resize">
+                </div>
+                <div class="p2-h2">
+                    <h2>The journey</h2>
+                    <article>
+                        <p>Jan's Sisimiut Boat Safari offers more than just a glimpse into Greenland's spectacular landscapes; it's an immersive journey into the heart of the Arctic wilderness. Each tour is meticulously crafted to showcase the breathtaking beauty of Greenland, from its towering icebergs and serene fjords to the abundant wildlife that calls this place home.</p> 
+                        
+                        <p>Jan’s intimate knowledge of the area allows guests to experience hidden gems often overlooked by standard tours, making each excursion a unique adventure.<br>The tours cater to a wide range of interests, from wildlife enthusiasts eager to spot seals and whales, to culture buffs interested in the rich history and traditions of Greenland's indigenous communities. Jan’s personal stories and insights into local life add an enriching layer to the experience, bridging the gap between visitor and local perspectives.
+                        </p>   
+                    </article>
+                </div>
+             </section>
+            </div> 
+		</main>
+	</body>
+</html>
 
 <Footer></Footer>
+
+<style>
+    @media (min-width: 768px) {
+main {
+    background-color: #0E1D35;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family: "Inter", sans-serif;
+    font-style: italic;
+    padding-top: 20px;
+}
+p {
+    text-align: left;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    padding-left: 120px;
+    padding-right: 50px;
+    line-height: 2.5rem;   
+}
+ .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 5px; 
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 5px; 
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.sec2-back-color {
+    background-color: #DDF4FE;
+}
+.sec2-back-color p {
+    color: black;
+}
+.sec2-back-color h2 {
+    color: black;
+}
+.hero-image-container {
+    max-width: 100%; 
+    max-height: 70vh; 
+    overflow: hidden;
+    position: relative;
+}
+.hero-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.slideshow-container {
+    overflow: hidden;
+    margin: 20px auto;
+}
+.slide {
+    text-align: center;
+    padding: 10px;
+    transition: opacity 0.5s;
+}
+.slide img {
+    max-width: 65%;
+    height: auto;
+}
+.image-text {
+    color: white;
+    font-size: 14px;
+    margin-top: 10px;
+    font-family: "Inter", sans-serif;
+}
+.dots-container {
+    text-align: center;
+    margin-top: 10px;
+}
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+.active-dot {
+    background-color: #C8102E;
+}
+.img-resize {
+    width: 800px; 
+    height: auto; 
+}
+#section-img2 {  
+    padding-left: 120px;
+    align-items: center;
+    display: flex;
+}
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+ main {
+    background-color: #0E1D35;
+}
+h2 {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-style: italic;
+}
+ p {
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 1.5rem;
+}
+ .container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 5px; 
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.container2 {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 5px; 
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.sec2-back-color {
+    background-color: #DDF4FE;
+}
+.sec2-back-color p {
+    color: black;
+ }
+.sec2-back-color h2 {
+    color: black;
+}
+.hero-image-container {
+    max-width: 100%; 
+    max-height: 70vh; 
+    overflow: hidden;
+    position: relative;
+}
+.hero-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.slideshow-container {
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+.slide {
+    text-align: center;
+    padding: 10px;
+    transition: opacity 0.5s;
+}
+
+.slide img {
+    max-width: 65%;
+    height: auto;
+}
+
+.image-text {
+    color: white;
+    font-size: 13px;
+    margin-top: 10px;
+    font-family: "Inter", sans-serif;
+}
+
+.dots-container {
+    text-align: center;
+    margin-top: 10px;
+}
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+.active-dot {
+    background-color: #C8102E;
+}
+.img-resize {
+    width: 65%; 
+    height: auto; 
+}
+#section-img2 {  
+text-align: center;
+}
+}
+</style>
+
+
+<script>
+    let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let slides = document.getElementsByClassName("slide");
+  let dots = document.getElementsByClassName("dot");
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slideIndex++;
+
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].classList.remove("active-dot");
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].classList.add("active-dot");
+
+  setTimeout(showSlides, 10000); 
+}
+
+let dotElements = document.getElementsByClassName("dot");
+for (let i = 0; i < dotElements.length; i++) {
+  dotElements[i].addEventListener("click", function () {
+    slideIndex = i + 1;
+    showSlides();
+  });
+}
+
+</script>
