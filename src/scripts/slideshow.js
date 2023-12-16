@@ -1,5 +1,7 @@
 let slideIndex = 0;
 let timer;
+let startX = 0;
+let endX = 0;
 
 // The function that starts the slideshow
 function startSlideshow() {
@@ -69,3 +71,28 @@ window.addEventListener("load", () => {
   //  startSlideshow();
   showSlides();
 });
+
+// Adds touch functionality to the slideshow
+// Add event listeners for touch events
+/* window.addEventListener("touchstart", function (event) {
+  startX = event.touches[0].clientX;
+});
+
+window.addEventListener("touchmove", function (event) {
+  endX = event.touches[0].clientX;
+});
+
+window.addEventListener("touchend", function () {
+  var threshold = 100; //required min distance traveled to be considered swipe
+  var direction = endX < startX ? "left" : "right";
+  var dist = Math.abs(endX - startX);
+
+  if (dist > threshold) {
+    if (direction === "right") {
+      slideIndex = slideIndex === 0 ? slides.length - 1 : slideIndex - 1;
+    } else {
+      slideIndex = slideIndex === slides.length - 1 ? 0 : slideIndex + 1;
+    }
+    showSlides();
+  }
+}); */
