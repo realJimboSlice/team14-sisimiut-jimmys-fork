@@ -96,6 +96,7 @@ main {
     background-color: #0E1D35;
 }
 
+/* h2 styling */
 h2 {
     text-align: center;
     color: white;
@@ -104,6 +105,8 @@ h2 {
     font-style: italic;
     line-height: 120%
 }
+
+/* Paragraphs styling */
 p {
     text-align: left;
     color: white;
@@ -165,19 +168,23 @@ p {
 /* Media queries, responsive design start */
 
 @media screen and (max-width: 768px) {
+
+    /* Changes grid from 2 columns to 1 columns */
+    /* Reduces padding by 25% */
     .container, .container2 {
         grid-template-columns: 1fr; 
         padding: calc(50px * 0.75);
     }
 
+    /* Changes heading to span from 2 columns to 1 column */
     .section-heading {
         grid-column: span 1;
     }
-
+    /* Reduces padding of heading by 25% */
     h2 {
         font-size: calc(30px * 0.75);
     }
-
+    /* Reduces padding of paragraphs by 25% */
     p {
         font-size: calc(20px * 0.75);
     }
