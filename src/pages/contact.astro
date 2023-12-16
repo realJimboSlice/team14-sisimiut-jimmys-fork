@@ -18,12 +18,32 @@ import Footer from '../components/Footer.astro';
         </address>
     </div>
 
-
-
     <form>
-
-      
-      
+        <label for="tourlist">Tour:</label><br>
+        <select id="tourlist" name="tourlist">
+            <option value=""></option>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+          </select>
+          <label for="tourdate">Tour Date:</label>
+          <input type="date" id="tourdate" name="tourdate" value="2023-12-16" min="2023-12-18" />
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname">
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email">
+        <label for="tel">Phone Number (include area code):</label><br>
+        <input type="tel" id="tel" name="tel">
+        <label for="adults">Nr. of adults:</label><br>
+        <input type="number" id="adults" name="adults"><br>
+        <label for="children">Nr. of children:</label><br>
+        <input type="number" id="children" name="children">
+        <p><label for="message">Message:</label></p>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea>
+        <input type="submit" value="Send">
     </form>
 
 </div>
@@ -53,7 +73,7 @@ gap: 20px;
 
 /* Contact info start */
 .redbox{
-    color: white;
+    color: #fff;
     background-color: #c8102e;
     padding: 40px 20px;
     width: 600px;
