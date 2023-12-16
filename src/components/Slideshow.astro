@@ -1,26 +1,31 @@
 <div class="slideshow-container">
     <div class="mySlides fade">
       <img src="../../../public/imgs/glaciers.png" />
-      <div class="text">Deez One</div>
+      <div class="text"><span>Deez One</span></div>
     </div>
 
     <div class="mySlides fade">
         <img src="../../../public/imgs/solsisi.jpg" />
-      <div class="text">Deez Two</div>
+      <div class="text"><span>Deez Two</span></div>
     </div>
 
     <div class="mySlides fade">
       <img src="../../../public/imgs/glaciers.png" />
-      <div class="text">Deez Three</div>
+      <div class="text"><span>Deez Three</span></div>
     </div>
+    <div class="dot-container">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+  </div>
 </div>
-<br />
+<!-- <br /> -->
 
-<div class="dot-container">
+<!-- <div class="dot-container">
     <span class="dot"></span>
     <span class="dot"></span>
     <span class="dot"></span>
-</div>
+</div> -->
 
   <script src="../scripts/slideshow.js"></script>
 
@@ -58,9 +63,15 @@
       font-weight: 700;
       /* padding: 8px 12px; */
       position: absolute;
-      bottom: 12px;
+      bottom: 8px;
       width: 100%;
       text-align: center;
+    }
+
+    .mySlides .text span {
+      margin: 0;
+      padding: 2.5px;
+      background-color: #000;
     }
     
     /* The dots/bullets/indicators */
@@ -74,6 +85,7 @@
       margin: 0 2px;
       background-color: #bbb;
       border-radius: 50%;
+      border: 1px solid #fff;
       display: inline-block;
       transition: background-color 0.6s ease;
       cursor: pointer;
