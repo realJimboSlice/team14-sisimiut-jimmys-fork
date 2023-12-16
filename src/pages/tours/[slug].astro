@@ -1,6 +1,8 @@
 ---
 import "../../styles/tour-details-style.css";
 import Slideshow from "../../components/Slideshow.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
 
 export async function getStaticPaths() {
   const data = await fetch("https://upiqsxfhchnuzrsxvgbp.supabase.co/rest/v1/sisimiut_private_boat_safari",
@@ -58,6 +60,7 @@ console.log(tour)
 	</head>
 
 	<body>
+        <Header></Header>
 		<main>
 			<div class="site-container">
 				<div class="hero-image-container">
@@ -120,5 +123,6 @@ console.log(tour)
                 </section>
 			</div>
 		</main>
+        <Footer></Footer>
 	</body>
 </html>
