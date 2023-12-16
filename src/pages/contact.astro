@@ -67,11 +67,11 @@ const data = await fetch(
             </div>
             <div class="form-input">
                 <label for="adults">Nr. of adults</label>
-                <input type="number" id="adults" name="adults">
+                <input type="number" id="adults" name="adults" min="0">
             </div>
             <div class="form-input">
                 <label for="children">Nr. of children</label>
-                <input type="number" id="children" name="children">
+                <input type="number" id="children" name="children" min="0">
             </div>
             <div class="form-input">
                 <label for="message">Message</label>
@@ -184,7 +184,7 @@ gap: 20px;
 }
 
 .form-input textarea {
-    width: 100%;
+    /* width: 100%; */
     height: 10em;
     background-color: #0A1D37;
     color: #fff;
