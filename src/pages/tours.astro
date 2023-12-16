@@ -1,5 +1,6 @@
 ---
-
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import Tour_card from "../components/Tour_card.astro"
 import "../styles/tours-overview-style.css";
 
@@ -25,6 +26,7 @@ import "../styles/tours-overview-style.css";
 	</head>
 
 	<body>
+		<Header></Header>
 			<div class="site-container">
 				<div class="hero-image-container">
 					<img src="https://visitgreenland.com/wp-content/uploads/blue-ice-boat-puttut-among-icebergs-near-qooroq-ice-fjord-in-narsarsuaq-02.jpg" alt="">
@@ -43,5 +45,6 @@ import "../styles/tours-overview-style.css";
 					</section>
 				</main>
 			</div>
+		<Footer></Footer>	
 	</body>
 </html>
