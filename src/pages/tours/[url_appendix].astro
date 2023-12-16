@@ -9,7 +9,7 @@ export async function getStaticPaths() {
         headers: {
             apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVwaXFzeGZoY2hudXpyc3h2Z2JwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDIwMzEwNjgsImV4cCI6MjAxNzYwNzA2OH0.nHtV6LAiYP_CkS_NEPjMxAxV4M_u40bYxUzb46-GjD8" 
         },
-    }).then(response => response.json());
+    }).then(res => res.json());
 
   return data.map((tour) => {
     return {

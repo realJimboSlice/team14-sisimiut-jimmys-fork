@@ -1,9 +1,25 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+
+let today = new Date().toISOString().substr(0, 10);
+
+/* Set date to seven days in the future */
+/* let sevenDaysFromNow = new Date();
+sevenDaysFromNow.setDate(sevenDaysFromNow.getDate() + 7);
+let sevenDaysFromNowString = sevenDaysFromNow.toISOString().substr(0, 10); */
+
+const data = await fetch(
+     "https://upiqsxfhchnuzrsxvgbp.supabase.co/rest/v1/sisimiut_private_boat_safari?order=tag_typeoftour.asc",
+     {
+         method : "GET", 
+         headers: {
+             apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVwaXFzeGZoY2hudXpyc3h2Z2JwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDIwMzEwNjgsImV4cCI6MjAxNzYwNzA2OH0.nHtV6LAiYP_CkS_NEPjMxAxV4M_u40bYxUzb46-GjD8" 
+         },
+     }
+ ).then(res => res.json());
+ 
 ---
-
-
 
 <Header></Header>
 
@@ -12,9 +28,9 @@ import Footer from '../components/Footer.astro';
     <div class="redbox">
         <address class="contact-information">
             <h1>Contact information:</h2>
-            <h2><a href="tel:+299525690">+299 525690</a> (Mon-Fri 09:00-13:00 GMT-2)</h3>
-            <h2>E-mail: <a href="mailto:janbanemann@outlook.dk">janbanemann@outlook.dk</a></h3>
-            <h2>For a price estimate, please fill out the form:</h3>
+            <h2><a href="tel:+299525690">+299 525690</a> (Mon-Fri 09:00-13:00 GMT-2)</h2>
+            <h2>E-mail: <a href="mailto:janbanemann@outlook.dk">janbanemann@outlook.dk</a></h2>
+            <h2>For a price estimate, please fill out the form:</h2>
         </address>
     </div>
 
@@ -22,13 +38,12 @@ import Footer from '../components/Footer.astro';
         <label for="tourlist">Tour:</label><br>
         <select id="tourlist" name="tourlist">
             <option value=""></option>
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="fiat">Fiat</option>
-            <option value="audi">Audi</option>
+            {data.map(item => (
+                <option value={item.card_name}>{item.card_name}</option>
+            ))}
           </select>
           <label for="tourdate">Tour Date:</label>
-          <input type="date" id="tourdate" name="tourdate" value="2023-12-16" min="2023-12-18" />
+          <input type="date" id="tourdate" name="tourdate" value={today} min={today} />
         <label for="fname">First name:</label><br>
         <input type="text" id="fname" name="fname"><br>
         <label for="lname">Last name:</label><br>
@@ -103,5 +118,28 @@ gap: 20px;
 }
 
 /* Contact info slut */
+
+/* Forms start */
+
+/* Forms slut */
  
 </style>
+
+<!-- <script>
+
+    Tilføj og rediger hvis der bliver tid SCRIPT TIL AT VALIDERE FORMS INDEN DE BLIVER SENDT TIL NETLIFY
+
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+        // Get form fields
+        var fname = document.getElementById('fname').value;
+        var lname = document.getElementById('lname').value;
+        var email = document.getElementById('email').value;
+        var tel = document.getElementById('tel').value;
+
+        // Validate form fields
+        if (fname === '' || lname === '' || email === '' || tel === '') {
+            alert('All fields must be filled out');
+            event.preventDefault();
+        }
+    });
+</script> -->
