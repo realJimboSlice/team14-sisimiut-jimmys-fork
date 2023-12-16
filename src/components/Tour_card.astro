@@ -36,8 +36,8 @@ const {data} = Astro.props;
         <div class="content-description">
             <p>{data.card_description}</p>
         </div>
-        <!-- <a href={`tours/${data.url_appendix}`}><div class="centered-button" tab-index="0">Read more and book tour</div></a> -->
-        <a href={`tour/${data.slug}`}><div class="centered-button" tab-index="0">Read more and book tour</div></a>
+        <!-- <a href={`tour/${data.slug}`}><div class="centered-button" tab-index="0">Read more and book tour</div></a> -->
+        <a href={`/tours/${data.slug}`}><div class="centered-button" tab-index="0">Read more and book tour</div></a>
     </div>
 </div>
 
