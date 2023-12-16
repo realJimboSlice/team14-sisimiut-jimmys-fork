@@ -1,6 +1,6 @@
 ---
 import "../../styles/tour-details-style.css";
-import Slideshow from "../../components/Slideshow.astro";
+import Slideshow from "../components/Slideshow.astro";
 
 export async function getStaticPaths() {
   const data = await fetch("https://upiqsxfhchnuzrsxvgbp.supabase.co/rest/v1/sisimiut_private_boat_safari",
@@ -11,16 +11,16 @@ export async function getStaticPaths() {
         },
     }).then(res => res.json());
 
-  return data.map((tour) => {
+  return data.map((post) => {
     return {
-      params: { url_appendix: tour.url_appendix },
-      props: { myData: tour },
+      params: { slug: post.slug },
+      props: { post },
     };
   });
 }
 
-const {myData} = Astro.props;
-console.log(myData)
+const {post} = Astro.props;
+console.log(post)
 
 
 /* 
