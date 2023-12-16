@@ -214,6 +214,8 @@ gap: 40px;
 
 /* Media Queries, responsive design start */
 
+/* Mobile version */
+
 @media (max-width: 768px) {
     .grid_1-1 {
         grid-template-columns: 1fr;
@@ -226,7 +228,6 @@ gap: 40px;
     }
 
     .contactbox {
-        /* width: 100%; */
         padding: 20px 10px;
     }
 
@@ -235,7 +236,7 @@ gap: 40px;
     }
 
     .form-input label {
-    font-size: 20px;
+    font-size: 17.5px;
     padding-bottom: 20px;
     }
 
@@ -247,29 +248,44 @@ gap: 40px;
     .send-button input {
     font-size: 20px;
     }
-    
+
+}
+
+/* Tablet version */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .grid_1-1 {
+        grid-template-columns: 1fr;
+        padding: 75px 35px;
+    }
+
+    .tour-signup-container {
+        grid-template-columns: 1fr;
+        gap: 20px 35px;
+    }
+
+    .contactbox {
+        padding: 35px 18px;
+    }
+
+    .form-input:last-child {
+        grid-column: span 1;
+    }
+
+    .form-input label {
+        font-size: 21px;
+        padding-bottom: 28px;
+    }
+
+    .form-input textarea {
+        margin-bottom: 28px;
+    }
+
+    .send-button input {
+        font-size: 23px;
+    }
 }
 
 
 /* Media Queries, responsive design slut */
 
 </style>
-
-<!-- <script>
-
-    Tilføj og rediger hvis der bliver tid SCRIPT TIL AT VALIDERE FORMS INDEN DE BLIVER SENDT TIL NETLIFY
-
-    document.getElementById('myForm').addEventListener('submit', function(event) {
-        // Get form fields
-        var fname = document.getElementById('fname').value;
-        var lname = document.getElementById('lname').value;
-        var email = document.getElementById('email').value;
-        var tel = document.getElementById('tel').value;
-
-        // Validate form fields
-        if (fname === '' || lname === '' || email === '' || tel === '') {
-            alert('All fields must be filled out');
-            event.preventDefault();
-        }
-    });
-</script> -->
