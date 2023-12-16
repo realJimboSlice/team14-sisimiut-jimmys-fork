@@ -25,7 +25,7 @@ const data = await fetch(
 
 <div class="grid_1-1">
 
-    <div class="redbox">
+    <div class="contactbox">
         <address class="contact-information">
             <h1>Contact information:</h2>
             <h2><a href="tel:+299525690">+299 525690</a> (Mon-Fri 09:00-13:00 GMT-2)</h2>
@@ -110,28 +110,28 @@ gap: 40px;
 }
 
 /* Contact info start */
-.redbox{
+.contactbox{
     color: #fff;
     background-color: #c8102e;
     padding: 40px 20px;
-    width: 600px;
+    /* width: 600px; */
     height: fit-content;
 }
 
-.redbox h1 {
+.contactbox h1 {
     font-size: 35px;
     padding-top: 0px;
     padding-bottom: 20px;
     font-style: italic;
 }
 
-.redbox h2 {
+.contactbox h2 {
     font-size: 25px;
     padding: 20px 0px;
     font-style: italic
 }
 
-.redbox h2:last-child {
+.contactbox h2:last-child {
     padding-bottom: 0px;
 }
 
@@ -211,6 +211,47 @@ gap: 40px;
 }
 
 /* Forms slut */
+
+/* Media Queries, responsive design start */
+
+@media (max-width: 768px) {
+    .grid_1-1 {
+        grid-template-columns: 1fr;
+        padding: 60px 20px;
+    }
+
+    .tour-signup-container {
+        grid-template-columns: 1fr;
+        gap: 10px 20px;
+    }
+
+    .contactbox {
+        /* width: 100%; */
+        padding: 20px 10px;
+    }
+
+    .form-input:last-child {
+    grid-column: span 1;
+    }
+
+    .form-input label {
+    font-size: 20px;
+    padding-bottom: 20px;
+    }
+
+    .form-input textarea {
+    margin-bottom: 20px;
+    
+    }
+
+    .send-button input {
+    font-size: 20px;
+    }
+    
+}
+
+
+/* Media Queries, responsive design slut */
 
 </style>
 
