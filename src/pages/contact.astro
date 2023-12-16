@@ -34,10 +34,10 @@ const data = await fetch(
         </address>
     </div>
 
-    <form class="tour-signup">
+    <form class="tour-signup" name="tour-signup" method="POST" data-netlify="true">
         <div class="tour-signup-container">
-            <div>
-                <label for="tourlist">Tour:</label><br>
+            <div class="form-input">
+                <label for="tourlist">Tour</label>
                 <select id="tourlist" name="tourlist">
                     <option value=""></option>
                     {data.map(item => (
@@ -45,40 +45,42 @@ const data = await fetch(
                     ))}
                   </select>
             </div>
-            <div>
-                  <label for="tourdate">Tour Date:</label>
+            <div class="form-input">
+                  <label for="tourdate">Tour Date</label>
                   <input type="date" id="tourdate" name="tourdate" value={today} min={today} />
             </div>
-            <div>
-                <label for="fname">First name:</label><br>
-                <input type="text" id="fname" name="fname"><br>
+            <div class="form-input">
+                <label for="fname">First name</label>
+                <input type="text" id="fname" name="fname">
             </div>
-            <div>
-                <label for="lname">Last name:</label><br>
+            <div class="form-input">
+                <label for="lname">Last name</label>
                 <input type="text" id="lname" name="lname">
             </div>
-            <div>
-                <label for="email">Email:</label><br>
+            <div class="form-input">
+                <label for="email">Email</label>
                 <input type="email" id="email" name="email">
             </div>
-            <div>
-                <label for="tel">Phone Number (include area code):</label><br>
+            <div class="form-input">
+                <label for="tel">Phone Number</label>
                 <input type="tel" id="tel" name="tel">
             </div>
-            <div>
-                <label for="adults">Nr. of adults:</label><br>
-                <input type="number" id="adults" name="adults"><br>
+            <div class="form-input">
+                <label for="adults">Nr. of adults</label>
+                <input type="number" id="adults" name="adults">
             </div>
-            <div>
-                <label for="children">Nr. of children:</label><br>
+            <div class="form-input">
+                <label for="children">Nr. of children</label>
                 <input type="number" id="children" name="children">
             </div>
+            <div class="form-input">
+                <label for="message">Message</label>
+                <textarea id="message" name="message"></textarea>
+            </div>
         </div>
-        <div>
-            <p><label for="message">Message:</label></p>
-            <textarea id="message" name="message"></textarea>
+        <div class="send-button">
+            <input type="submit" value="Send">
         </div>
-        <div><input type="submit" value="Send"></div>
     </form>
 
 </div>
@@ -142,19 +144,71 @@ gap: 20px;
 /* Forms start */
 
 .tour-signup {
-    align-items: center;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .tour-signup-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 10px 50px;
+    padding-bottom: 20px;
 }
 
-.tour-signup textarea {
-    width: 100%; height: 100%;
-    
+/* Form labels */
+
+.form-input label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    padding-bottom: 10px;
 }
+
+/* Form input fields */
+.form-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input input, .form-input select{
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    background-color: #0A1D37;
+    color: #fff;
+    padding-left: 10px;
+}
+
+.form-input:last-child {
+    grid-column: span 2;
+}
+
+.form-input textarea {
+    width: 100%;
+    height: 10em;
+    background-color: #0A1D37;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Send button */
+.send-button {
+    display: block;
+    margin: auto;
+}
+
+.send-button input {
+    background-color: #c8102e;
+    background-color: #c8102e;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    border: 0;
+    border-radius: 8px;
+    padding: 15px 80px;
+}
+
+
 /* Forms slut */
 
 </style>
