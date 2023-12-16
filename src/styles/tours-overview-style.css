@@ -8,11 +8,12 @@ body {
   padding: 0;
 }
 
+/* Hero image start */
+
 .hero-image-container {
   height: 50vh;
   overflow: hidden;
   position: relative;
-  /* margin-bottom: 10vh; */
 }
 
 .hero-image-container img {
@@ -36,6 +37,10 @@ body {
   font-style: italic;
 }
 
+/* Hero image slut */
+
+/* Tour section start */
+
 .tour-section {
   padding: 40px 0px;
   background-color: #0a1d37;
@@ -48,9 +53,53 @@ body {
   font-style: italic;
 }
 
+/* Tour section slut */
+
+/* Container for all the cards start */
+
 .all-cards-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px 60px;
   padding: 0 50px;
 }
+
+/* Container for all the cards slut */
+
+/* Media Queries, responsive design start */
+
+/* Mobile version */
+@media only screen and (max-width: 768px) {
+  .hero-image-container {
+    height: 30vh;
+  }
+
+  .tour-section {
+    padding: 20px 0px;
+  }
+
+  .all-cards-container {
+    grid-template-columns: 1fr;
+    gap: 20px 30px;
+    padding: 0 60px;
+  }
+}
+
+/* Tablet version */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .hero-image-container {
+    height: 40vh;
+  }
+
+  .tour-section {
+    padding: 30px 0px;
+  }
+
+  .all-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 40px;
+    padding: 0 30px;
+  }
+}
+
+/* Media Queries, responsive design slut */
