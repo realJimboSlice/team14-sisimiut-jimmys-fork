@@ -73,8 +73,9 @@ window.addEventListener("load", () => {
 });
 
 // Adds touch functionality to the slideshow
-// Add event listeners for touch events
-/* window.addEventListener("touchstart", function (event) {
+
+// Event listeners for touch events
+window.addEventListener("touchstart", function (event) {
   startX = event.touches[0].clientX;
 });
 
@@ -83,9 +84,9 @@ window.addEventListener("touchmove", function (event) {
 });
 
 window.addEventListener("touchend", function () {
-  var threshold = 100; //required min distance traveled to be considered swipe
-  var direction = endX < startX ? "left" : "right";
-  var dist = Math.abs(endX - startX);
+  let threshold = 100; //required mininimum distance traveled to be considered a swipe on a touch device
+  let direction = endX < startX ? "left" : "right";
+  let dist = Math.abs(endX - startX);
 
   if (dist > threshold) {
     if (direction === "right") {
@@ -95,4 +96,4 @@ window.addEventListener("touchend", function () {
     }
     showSlides();
   }
-}); */
+});
