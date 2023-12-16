@@ -46,32 +46,32 @@ const data = await fetch(
                   </select>
             </div>
             <div class="form-input">
-                  <label for="tourdate">Tour Date</label>
-                  <input type="date" id="tourdate" name="tourdate" value={today} min={today} />
+                <label for="tourdate">Tour Date</label>
+                <input type="date" id="tourdate" name="tourdate" value={today} min={today} required />
             </div>
             <div class="form-input">
                 <label for="fname">First name</label>
-                <input type="text" id="fname" name="fname">
+                <input type="text" id="fname" name="fname" required>
             </div>
             <div class="form-input">
                 <label for="lname">Last name</label>
-                <input type="text" id="lname" name="lname">
+                <input type="text" id="lname" name="lname" required>
             </div>
             <div class="form-input">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" required>
             </div>
             <div class="form-input">
                 <label for="tel">Phone Number</label>
-                <input type="tel" id="tel" name="tel">
+                <input type="tel" id="tel" name="tel" required>
             </div>
             <div class="form-input">
                 <label for="adults">Nr. of adults</label>
-                <input type="number" id="adults" name="adults" min="0">
+                <input type="number" id="adults" name="adults" min="0" required>
             </div>
             <div class="form-input">
                 <label for="children">Nr. of children</label>
-                <input type="number" id="children" name="children" min="0">
+                <input type="number" id="children" name="children" min="0" required>
             </div>
             <div class="form-input">
                 <label for="message">Message</label>
