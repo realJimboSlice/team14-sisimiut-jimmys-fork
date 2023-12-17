@@ -4,7 +4,7 @@
 
 <div class="footerbox">
     <div class="logo">
-      <img class="footerimg" tabindex="0" alt="Sisimiut Private Boat Safari logo - a boat (inverted colors)" src="https://i.ibb.co/gZH6x4k/Group-69.png" />
+      <img class="footerimg" tabindex="0" alt="Sisimiut Private Boat Safari logo - a boat (inverted colors)" src="../public/imgs/Invertedlogo.svg" />
     </div>
 
     
@@ -12,7 +12,10 @@
     <a class="about" href="about">ABOUT</a>
     <a class="contact" href="contact">CONTACT</a>
 
-    <a target="_blank" href="https://www.instagram.com/boatsafarigl/"><img tabindex="0" class="some" alt="SoMe logos - Instagram, Facebook and Youtube" src="https://i.ibb.co/v4ztZC1/Group-18.png" /></a>
+    <div class="somediv">
+        <a target="_blank" href="https://www.facebook.com/profile.php?id=100082581348586"><img tabindex="0" class="some1" alt="SoMe logos - Instagram, Facebook and Youtube" src="../public/imgs/Facebook.svg" /></a>
+        <a target="_blank" href="https://www.instagram.com/boatsafarigl/"><img tabindex="0" class="some2" alt="SoMe logos - Instagram, Facebook and Youtube" src="../public/imgs/Instagram.svg" /></a>
+      </div>
 
     <a target="_blank" href="https://dk.trustpilot.com/"><img tabindex="0" class="trustpilot" alt="SoMe logos - Instagram, Facebook and Youtube" src="https://i.ibb.co/C0GNWWH/Trustpilot-Logo-2022-svg.png" /></a>
   </div>
@@ -57,5 +60,60 @@ body{
 
 .footerimg{
     width: 15vw;
+}
+
+.somediv{
+    display: flex;
+}
+
+.some1{
+    width: 3vw;
+}
+
+.some2{
+    width: 3vw;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
+@media only screen and (max-width: 1000px) {
+
+.footerbox{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 10%;
+}
+   
+.trustpilot{
+    width: 0%;
+    position: absolute;
+}
+
+.footerimg{
+    width: 0%;
+    position: absolute;
+}
+
+.logo{
+    width: 0;
+    position: absolute;
+}
+}
+
+@media only screen and (max-width: 600px) {
+
+.footerbox{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 10%;
+    font-size: 4vw;
+}
+
+.some, .some1, .some2{
+    width: 0;
+    position: absolute;
+}
 }
 </style>
