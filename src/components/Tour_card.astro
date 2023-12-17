@@ -4,7 +4,7 @@ const {data} = Astro.props;
 
 <div class="card-container">
     <div class="card-image-container">
-        <img class="card-image" src={data.card_img_src} alt="Card Image">
+        <img class="card-image" src={data.card_img_src} alt={data.card_img_alt_text}>
         <div class="tag type-of-tour">
             <div class="tag-text">{data.tag_typeoftour}</div>
         </div>
@@ -27,17 +27,17 @@ const {data} = Astro.props;
     </div>
     <div class="content-container">
         <div class="content-heading-1">
-            <p>{data.card_location}</p>
+            <h2>{data.card_location}</h2>
         </div>
         <div class="content-heading-2">
-            <p>{data.card_name}</p>
+            <h3>{data.card_name}</h3>
         </div>
         <hr>
         <div class="content-description">
             <p>{data.card_description}</p>
         </div>
         <!-- <a href={`tour/${data.slug}`}><div class="centered-button" tab-index="0">Read more and book tour</div></a> -->
-        <a href={`/tours/${data.slug}`}><div class="centered-button" tab-index="0">Read more</div></a>
+        <a href={`/tours/${data.slug}`}><div class="centered-button" tab-index="0">Read more and book now</div></a>
     </div>
 </div>
 
