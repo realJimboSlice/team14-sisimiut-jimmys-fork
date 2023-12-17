@@ -4,11 +4,6 @@ import Footer from '../components/Footer.astro';
 
 let today = new Date().toISOString().substr(0, 10);
 
-/* Set date to seven days in the future */
-/* let sevenDaysFromNow = new Date();
-sevenDaysFromNow.setDate(sevenDaysFromNow.getDate() + 7);
-let sevenDaysFromNowString = sevenDaysFromNow.toISOString().substr(0, 10); */
-
 const data = await fetch(
      "https://upiqsxfhchnuzrsxvgbp.supabase.co/rest/v1/sisimiut_private_boat_safari?order=tag_typeoftour.asc",
      {
@@ -21,71 +16,84 @@ const data = await fetch(
  
 ---
 
-<Header></Header>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Contact</title>
+	</head>
 
-<div class="grid_1-1">
-
-    <div class="contactbox">
-        <address class="contact-information">
-            <h1>Contact information:</h2>
-            <h2><a href="tel:+299525690">+299 525690</a> (Mon-Fri 09:00-13:00 GMT-2)</h2>
-            <h2>E-mail: <a href="mailto:janbanemann@outlook.dk">janbanemann@outlook.dk</a></h2>
-            <h2>For a price estimate, please fill out the form:</h2>
-        </address>
-    </div>
-
-    <form class="tour-signup" name="tour-signup" method="POST" data-netlify="true">
-        <div class="tour-signup-container">
-            <div class="form-input">
-                <label for="tourlist">Tour</label>
-                <select id="tourlist" name="tourlist">
-                    <option value=""></option>
-                    {data.map(item => (
-                        <option value={item.card_name}>{item.card_name}</option>
-                    ))}
-                  </select>
+<body>
+    <Header></Header>
+        <main>
+            <div class="grid_1-1">
+    
+                <div class="contactbox">
+                    <address class="contact-information">
+                        <h1>Contact information:</h2>
+                        <h2><a href="tel:+299525690">+299 525690</a> (Mon-Fri 09:00-13:00 GMT-2)</h2>
+                        <h2>E-mail: <a href="mailto:janbanemann@outlook.dk">janbanemann@outlook.dk</a></h2>
+                        <h2>For a price estimate, please fill out the form:</h2>
+                    </address>
+                </div>
+    
+                <form class="tour-signup" name="tour-signup" method="POST" data-netlify="true">
+                    <div class="tour-signup-container">
+                        <div class="form-input">
+                            <label for="tourlist">Tour</label>
+                            <select id="tourlist" name="tourlist">
+                                <option value=""></option>
+                                {data.map(item => (
+                                    <option value={item.card_name}>{item.card_name}</option>
+                                ))}
+                              </select>
+                        </div>
+                        <div class="form-input">
+                            <label for="tourdate">Tour Date</label>
+                            <input type="date" id="tourdate" name="tourdate" value={today} min={today} required />
+                        </div>
+                        <div class="form-input">
+                            <label for="fname">First name</label>
+                            <input type="text" id="fname" name="fname" required>
+                        </div>
+                        <div class="form-input">
+                            <label for="lname">Last name</label>
+                            <input type="text" id="lname" name="lname" required>
+                        </div>
+                        <div class="form-input">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-input">
+                            <label for="tel">Phone Number</label>
+                            <input type="tel" id="tel" name="tel" required>
+                        </div>
+                        <div class="form-input">
+                            <label for="adults">Nr. of adults</label>
+                            <input type="number" id="adults" name="adults" min="0" required>
+                        </div>
+                        <div class="form-input">
+                            <label for="children">Nr. of children</label>
+                            <input type="number" id="children" name="children" min="0" required>
+                        </div>
+                        <div class="form-input">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message"></textarea>
+                        </div>
+                    </div>
+                    <div class="send-button">
+                        <input type="submit" value="Send">
+                    </div>
+                </form>
             </div>
-            <div class="form-input">
-                <label for="tourdate">Tour Date</label>
-                <input type="date" id="tourdate" name="tourdate" value={today} min={today} required />
-            </div>
-            <div class="form-input">
-                <label for="fname">First name</label>
-                <input type="text" id="fname" name="fname" required>
-            </div>
-            <div class="form-input">
-                <label for="lname">Last name</label>
-                <input type="text" id="lname" name="lname" required>
-            </div>
-            <div class="form-input">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-input">
-                <label for="tel">Phone Number</label>
-                <input type="tel" id="tel" name="tel" required>
-            </div>
-            <div class="form-input">
-                <label for="adults">Nr. of adults</label>
-                <input type="number" id="adults" name="adults" min="0" required>
-            </div>
-            <div class="form-input">
-                <label for="children">Nr. of children</label>
-                <input type="number" id="children" name="children" min="0" required>
-            </div>
-            <div class="form-input">
-                <label for="message">Message</label>
-                <textarea id="message" name="message"></textarea>
-            </div>
-        </div>
-        <div class="send-button">
-            <input type="submit" value="Send">
-        </div>
-    </form>
-
-</div>
-
-<Footer></Footer>
+        </main>
+    <Footer></Footer>
+</body>
 
 <style>
 

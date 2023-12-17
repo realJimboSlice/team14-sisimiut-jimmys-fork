@@ -2,98 +2,112 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Home</title>
+	</head>
 
-<Header></Header>
 
-<div class="hero-image-container">
-    <img tabindex="0" alt="Hero image of Sisimiut"
-      src="https://i.ibb.co/VwQ2P0T/332378864-904652684004746-18939413797938788-n2.png"
-    />
-    </div>
-
-<div class="redbox">
-    <h2 tabindex="0" class="redboxh2">Journey Beyond the Ice: 
-    Greenland Boat Safaris, 
-    Nature's Spectacle on Arctic Seas!</h2>
-</div>
-
-<div class="bluebox">
-
-    <div class="badgediv">
-   <a target="_blank" href="https://knr.gl/da/nyheder/sisimiut-private-boat-safari-vinder-turismepris"><img class="badge" src="https://i.ibb.co/VQ87Pwc/badgewinner.png" alt="Tourism award 2023 winner badge"></a></div>
-
-    <h2 tabindex="0" class="homeh2">Meet your personal guide around Sisimiut</h2>
-
-    <div class="guidecard">
-        <img tabindex="0" class="homeimg" src="https://i.ibb.co/ccWQbgW/janbanemann.png" alt="Picture of your guide - Jan Banemann">
-        <div class="cardtext">
-            
-        <h3 tabindex="0">Your guide</h3>
-        <p tabindex="0">Award-winning guide 
-            Jan Banemann leads tours in Sisimiut while actively contributing to environmental conservation by cleaning the seas in the area.</p>
-            <a class="readmorebtn" href="/about">READ MORE</a>
-    </div>
-    </div>
-
-    <h2 tabindex="0" class="homeh2">Your private guide to the sea life around Sisimiut</h2>
-
-    <div class="tourscard">
-        <div class="cardtext">
-        <h3 tabindex="0">Discover arctic wonders</h3>
-        <p tabindex="0">Expirience Greenland's coast with 
-            Sisimiut Private Boat Safaris - 
-            this year's Tourism Award winner. 
-            Join us for an unforgettable journey!</p>
-        <a class="readmorebtn" href="tours">READ MORE</a>
-    </div>
-        <img tabindex="0" class="homeimg" src="https://i.ibb.co/mFdc6cv/406111842-378013484584263-30489291216582781-n-1.png" alt="Picture of the beautiful sea and glaciers by Sisimiut">
-    </div>
-</div>
-
-<h2 class="h2home" tabindex="0">Discover personalized adventures with Sisimiut Private Boat Safari.</h2>
-<h2 class="h2home" tabindex="0">Book today for guided travel to unique destinations.</h2>
-
-<div class="whitebox">
+<body>
+    <Header></Header>
     
-        <a href="tours"><div class="homecard">
-            <img class="homecardimg" src="https://www.boatsafari.gl/wp-content/uploads/2020/10/bb3-1152x1536.jpg" alt="Picture of one of the tours">
-            <h2 class="h2homecard">Sisimiut</h2>
-            <h3 class="h3homecard">ARCTIC CHAR WITH A ROD</h3>
-            <div class="underlinehome"></div>
-            <p class="phomecard">Go fishing for the Arctic Char with a rod. Greenland has some of the best arctic char in the world. Whole day (8 hours). From June 15 to September 1 st.</p>
-            <a class="homecardbtn" href="/tours/arctic-char-with-a-rod-tour">Read more and book tour</a>
-        </div></a>
-
-        <a href="tours"><div class="homecard">
-            <img class="homecardimg" src="https://www.boatsafari.gl/wp-content/uploads/2020/01/Screenshot-2.png" alt="Picture of one of the tours">
-            <h2 class="h2homecard">Sisimiut</h2>
-            <h3 class="h3homecard">EVERGREEN TOUR</h3>
-            <div class="underlinehome"></div>
-            <p class="phomecard">Experience the rich sea life around Sisimiut, Greenland. This tour takes you out to see as much sea life as possible. 3 hour duration. May to October.</p>
-            <a class="homecardbtn" href="/tours/evergreen-tour">Read more and book tour</a>
-        </div></a>
-
-        <a href="tours"><div class="homecard">
-            <img class="homecardimg" src="https://www.boatsafari.gl/wp-content/uploads/2020/01/been-1152x1536.jpg" alt="Picture of one of the tours">
-            <h2 class="h2homecard">Sisimiut</h2>
-            <h3 class="h3homecard">ATLANTIC WOLFFISH & HALIBUT</h3>
-            <div class="underlinehome"></div>
-            <p class="phomecard">In this tour you will experience traditional greenlandic fishing for the atlantic wolffish and halibut. Duration 6-8 hours. From June to September.</p>
-            <a class="homecardbtn" href="/tours/atlantic-wolffish-and-halibut-tour">Read more and book tour</a>
+    <div class="hero-image-container">
+        <img tabindex="0" alt="Hero image of Sisimiut"
+          src="https://i.ibb.co/VwQ2P0T/332378864-904652684004746-18939413797938788-n2.png"
+        />
         </div>
-    </div></a>
-
-   
-
-<div class="whitebox"> 
-    <a class="viewtoursbtn" href="tours">View all tours</a>
-</div>
- 
-
-<Footer></Footer>
+    
+    <div class="redbox">
+        <h2 tabindex="0" class="redboxh2">Journey Beyond the Ice:
+        Greenland Boat Safaris,
+        Nature's Spectacle on Arctic Seas!</h2>
+    </div>
+    
+    <div class="bluebox">
+    
+        <div class="badgediv">
+       <a target="_blank" href="https://knr.gl/da/nyheder/sisimiut-private-boat-safari-vinder-turismepris"><img class="badge" src="https://i.ibb.co/VQ87Pwc/badgewinner.png" alt="Tourism award 2023 winner badge"></a></div>
+    
+        <h2 tabindex="0" class="homeh2">Meet your personal guide around Sisimiut</h2>
+    
+        <div class="guidecard">
+            <img tabindex="0" class="homeimg" src="https://i.ibb.co/ccWQbgW/janbanemann.png" alt="Picture of your guide - Jan Banemann">
+            <div class="cardtext">
+    
+            <h3 tabindex="0">Your guide</h3>
+            <p tabindex="0">Award-winning guide
+                Jan Banemann leads tours in Sisimiut while actively contributing to environmental conservation by cleaning the seas in the area.</p>
+                <a class="readmorebtn" href="/about">READ MORE</a>
+        </div>
+        </div>
+    
+        <h2 tabindex="0" class="homeh2">Your private guide to the sea life around Sisimiut</h2>
+    
+        <div class="tourscard">
+            <div class="cardtext">
+            <h3 tabindex="0">Discover arctic wonders</h3>
+            <p tabindex="0">Expirience Greenland's coast with
+                Sisimiut Private Boat Safaris -
+                this year's Tourism Award winner.
+                Join us for an unforgettable journey!</p>
+            <a class="readmorebtn" href="tours">READ MORE</a>
+        </div>
+            <img tabindex="0" class="homeimg" src="https://i.ibb.co/mFdc6cv/406111842-378013484584263-30489291216582781-n-1.png" alt="Picture of the beautiful sea and glaciers by Sisimiut">
+        </div>
+    </div>
+    
+    <h2 class="h2home" tabindex="0">Discover personalized adventures with Sisimiut Private Boat Safari.</h2>
+    <h2 class="h2home" tabindex="0">Book today for guided travel to unique destinations.</h2>
+    
+    <div class="whitebox">
+    
+            <a href="tours"><div class="homecard">
+                <img class="homecardimg" src="https://www.boatsafari.gl/wp-content/uploads/2020/10/bb3-1152x1536.jpg" alt="Picture of one of the tours">
+                <h2 class="h2homecard">Sisimiut</h2>
+                <h3 class="h3homecard">ARCTIC CHAR WITH A ROD</h3>
+                <div class="underlinehome"></div>
+                <p class="phomecard">Go fishing for the Arctic Char with a rod. Greenland has some of the best arctic char in the world. Whole day (8 hours). From June 15 to September 1 st.</p>
+                <a class="homecardbtn" href="/tours/arctic-char-with-a-rod-tour">Read more and book tour</a>
+            </div></a>
+    
+            <a href="tours"><div class="homecard">
+                <img class="homecardimg" src="https://www.boatsafari.gl/wp-content/uploads/2020/01/Screenshot-2.png" alt="Picture of one of the tours">
+                <h2 class="h2homecard">Sisimiut</h2>
+                <h3 class="h3homecard">EVERGREEN TOUR</h3>
+                <div class="underlinehome"></div>
+                <p class="phomecard">Experience the rich sea life around Sisimiut, Greenland. This tour takes you out to see as much sea life as possible. 3 hour duration. May to October.</p>
+                <a class="homecardbtn" href="/tours/evergreen-tour">Read more and book tour</a>
+            </div></a>
+    
+            <a href="tours"><div class="homecard">
+                <img class="homecardimg" src="https://www.boatsafari.gl/wp-content/uploads/2020/01/been-1152x1536.jpg" alt="Picture of one of the tours">
+                <h2 class="h2homecard">Sisimiut</h2>
+                <h3 class="h3homecard">ATLANTIC WOLFFISH & HALIBUT</h3>
+                <div class="underlinehome"></div>
+                <p class="phomecard">In this tour you will experience traditional greenlandic fishing for the atlantic wolffish and halibut. Duration 6-8 hours. From June to September.</p>
+                <a class="homecardbtn" href="/tours/atlantic-wolffish-and-halibut-tour">Read more and book tour</a>
+            </div>
+        </div></a>
+    
+    
+    
+    <div class="whitebox">
+        <a class="viewtoursbtn" href="tours">View all tours</a>
+    </div>
+    
+    
+    <Footer></Footer>
+</body>
 
 
 
