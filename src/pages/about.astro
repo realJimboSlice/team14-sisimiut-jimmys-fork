@@ -21,7 +21,7 @@ import Slideshow from '../components/Slideshow.astro';
 		<div class="site-container">
             <main>
                 <div class="hero-image-container">
-                            <img src="https://i.ibb.co/brcppzD/cd7d08f4-9c98-45e6-a8a4-eddeae958d66.png" alt="cd7d08f4-9c98-45e6-a8a4-eddeae958d66">
+                    <img src="https://i.ibb.co/Jynkr7N/hero-about-done.webp" alt="hero-about-done" border="0">
                         </div>
                                 <section class="container">
                                     <h1 class="section-heading">Your guide</h2>
@@ -32,27 +32,26 @@ import Slideshow from '../components/Slideshow.astro';
                                             <p>Jan's deep understanding of Greenland's culture and nature, gained from his upbringing and local connections, offers an authentic experience.<br> His commitment to the environment is evident in his efforts to clean the seas and reduce his tours' carbon footprint. Jan’s tours are not just adventures; they're educational and conservation-oriented experiences, highlighting his dedication to preserving Greenland's pristine beauty.</p>
                                         </article>
                                     </div>
-                                        <div>
+                                        <div class="billeder">
                                             <Slideshow 
-                                            img1="https://i.ibb.co/rvkzzn1/327961741-865416751514190-4093255438454424729-n.png" width="580px"; 
+                                            img1="https://i.ibb.co/5FWbsJG/about-p1-1.webp" alt="Jan Banemann" width="580px"; 
                                             alt1="Jan Banemann"
                                             text1="Jan Banemann" 
-                                            img2="https://i.ibb.co/D40dP56/311214054-210816661301929-9120472651182352775-n-2.png" width="580px";
+                                            img2="https://i.ibb.co/1f0xyn2/about-billede2-kopi.webp" alt="Environmental conservation by the locals and Jan" width="580px";
                                             alt2="Environmental conservation by the locals and Jan"
                                             text2="Environmental conservation by the locals and Jan"
-                                            img3="https://i.ibb.co/j8cdy7n/381226877-353112333739027-7733290882163452830-n.png" width="580px";
+                                            img3="https://i.ibb.co/8BN8gVv/381226877-353112333739027-7733290882163452830-n.webp" alt="The local youth in Sisimiut, giving a helping hand" width="580px";
                                             alt3="The local youth in Sisimiut, giving a helping hand"
                                             text3="The local youth in Sisimiut, giving a helping hand"
                                             />
                                         </div>
                         </section>
-            
                     
                         
                             <section class="container2">
                                 <h2 class="section-heading">The journey</h2>
                                 <div id="section-img2">
-                                    <img src="https://i.ibb.co/stMy74f/356199823-319216283795299-3362709802950530685-n.jpg" alt="Mountain in Sisimiut" class="img-resize">
+                                    <img src="https://i.ibb.co/dLYdnqT/about-billede4.webp" alt="about-billede4" alt="Mountain in Sisimiut" class="img-resize">
                                 </div>
                                 <div class="p2-h2">
                                     <article>
@@ -159,6 +158,7 @@ p {
 
 /* Mobile version */
 @media screen and (max-width: 768px) {
+    
     .container, .container2 {
         grid-template-columns: 1fr; 
         padding: calc(50px * 0.75);
