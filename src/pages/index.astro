@@ -25,12 +25,12 @@ import Footer from '../components/Footer.astro';
     <h2 tabindex="0" class="homeh2">Meet your personal guide around Sisimiut</h2>
 
     <div class="guidecard">
-        <img tabindex="0" class="homeimg" src="../public/imgs/janbanemann.png" alt="Picture of your guide - Jan Banemann">
+        <img tabindex="0" class="homeimg" src="https://i.ibb.co/ccWQbgW/janbanemann.png" alt="Picture of your guide - Jan Banemann">
         <div class="cardtext">
         <h3 tabindex="0">Your guide</h3>
         <p tabindex="0">Award-winning guide 
             Jan Banemann leads tours in Sisimiut while actively contributing to environmental conservation by cleaning the seas in the area.</p>
-            <a class="readmorebtn" href="tours">READ MORE</a>
+            <a class="readmorebtn" href="/about">READ MORE</a>
     </div>
     </div>
 
@@ -45,7 +45,7 @@ import Footer from '../components/Footer.astro';
             Join us for an unforgettable journey!</p>
         <a class="readmorebtn" href="tours">READ MORE</a>
     </div>
-        <img tabindex="0" class="homeimg" src="../public/imgs/glaciers.png" alt="Picture of the beautiful sea and glaciers by Sisimiut">
+        <img tabindex="0" class="homeimg" src="https://i.ibb.co/mFdc6cv/406111842-378013484584263-30489291216582781-n-1.png" alt="Picture of the beautiful sea and glaciers by Sisimiut">
     </div>
 </div>
 
@@ -55,32 +55,29 @@ import Footer from '../components/Footer.astro';
 <div class="whitebox">
     
         <a href="tours"><div class="homecard">
-            <img class="homecardimg" src="../public/imgs/solsisi.jpg" alt="Picture of one of the tours">
+            <img class="homecardimg" src="https://www.boatsafari.gl/wp-content/uploads/2020/10/bb3-1152x1536.jpg" alt="Picture of one of the tours">
             <h2 class="h2homecard">Sisimiut</h2>
-            <h3 class="h3homecard">Askjasfa - Ghost village</h3>
+            <h3 class="h3homecard">ARCTIC CHAR WITH A ROD</h3>
             <div class="underlinehome"></div>
-            <p class="phomecard">Explore Assaqutaq, a deserted village, May-Sept. 2-hour 
-                tours reveal the ghost town's history and atmosphere.</p>
+            <p class="phomecard">Go fishing for the Arctic Char with a rod. Greenland has some of the best arctic char in the world. Whole day (8 hours). From June 15 to September 1 st.</p>
             <a class="homecardbtn" href="tours">Read more and book tour</a>
         </div></a>
 
         <a href="tours"><div class="homecard">
-            <img class="homecardimg" src="../public/imgs/solsisi.jpg" alt="Picture of one of the tours">
+            <img class="homecardimg" src="https://www.boatsafari.gl/wp-content/uploads/2020/01/Screenshot-2.png" alt="Picture of one of the tours">
             <h2 class="h2homecard">Sisimiut</h2>
-            <h3 class="h3homecard">Askjasfa - Ghost village</h3>
+            <h3 class="h3homecard">EVERGREEN TOUR</h3>
             <div class="underlinehome"></div>
-            <p class="phomecard">Explore Assaqutaq, a deserted village, May-Sept. 2-hour 
-                tours reveal the ghost town's history and atmosphere.</p>
+            <p class="phomecard">Experience the rich sea life around Sisimiut, Greenland. This tour takes you out to see as much sea life as possible. 3 hour duration. May to October.</p>
             <a class="homecardbtn" href="tours">Read more and book tour</a>
         </div></a>
 
         <a href="tours"><div class="homecard">
-            <img class="homecardimg" src="../public/imgs/solsisi.jpg" alt="Picture of one of the tours">
+            <img class="homecardimg" src="https://www.boatsafari.gl/wp-content/uploads/2020/01/been-1152x1536.jpg" alt="Picture of one of the tours">
             <h2 class="h2homecard">Sisimiut</h2>
-            <h3 class="h3homecard">Askjasfa - Ghost village</h3>
+            <h3 class="h3homecard">ATLANTIC WOLFFISH & HALIBUT</h3>
             <div class="underlinehome"></div>
-            <p class="phomecard">Explore Assaqutaq, a deserted village, May-Sept. 2-hour 
-                tours reveal the ghost town's history and atmosphere.</p>
+            <p class="phomecard">In this tour you will experience traditional greenlandic fishing for the atlantic wolffish and halibut. Duration 6-8 hours. From June to September.</p>
             <a class="homecardbtn" href="tours">Read more and book tour</a>
         </div>
     </div></a>
@@ -99,8 +96,6 @@ import Footer from '../components/Footer.astro';
 
 
 <style>
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
 .hero-image-container {
   height: 55vh;
@@ -227,7 +222,10 @@ font-size: 2vw;
 
 .homecardimg{
     width: 100%;
+    height: 350px; 
+    object-fit: cover; 
     border-radius: 11px 11px 0 0;
+    object-position: center top;
 }
 
 .h2homecard{
@@ -238,7 +236,7 @@ font-size: 2vw;
 
 .h3homecard{
     margin: 2% 7.5%;
-    font-size: 1.1vw;
+    font-size: 1vw;
 }
 
 .underlinehome{
