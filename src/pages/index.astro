@@ -21,12 +21,16 @@ import Footer from '../components/Footer.astro';
 </div>
 
 <div class="bluebox">
-    
+
+    <div class="badgediv">
+   <a target="_blank" href="https://knr.gl/da/nyheder/sisimiut-private-boat-safari-vinder-turismepris"><img class="badge" src="https://i.ibb.co/VQ87Pwc/badgewinner.png" alt="Tourism award 2023 winner badge"></a></div>
+
     <h2 tabindex="0" class="homeh2">Meet your personal guide around Sisimiut</h2>
 
     <div class="guidecard">
         <img tabindex="0" class="homeimg" src="https://i.ibb.co/ccWQbgW/janbanemann.png" alt="Picture of your guide - Jan Banemann">
         <div class="cardtext">
+            
         <h3 tabindex="0">Your guide</h3>
         <p tabindex="0">Award-winning guide 
             Jan Banemann leads tours in Sisimiut while actively contributing to environmental conservation by cleaning the seas in the area.</p>
@@ -60,7 +64,7 @@ import Footer from '../components/Footer.astro';
             <h3 class="h3homecard">ARCTIC CHAR WITH A ROD</h3>
             <div class="underlinehome"></div>
             <p class="phomecard">Go fishing for the Arctic Char with a rod. Greenland has some of the best arctic char in the world. Whole day (8 hours). From June 15 to September 1 st.</p>
-            <a class="homecardbtn" href="tours">Read more and book tour</a>
+            <a class="homecardbtn" href="/tours/arctic-char-with-a-rod-tour">Read more and book tour</a>
         </div></a>
 
         <a href="tours"><div class="homecard">
@@ -69,7 +73,7 @@ import Footer from '../components/Footer.astro';
             <h3 class="h3homecard">EVERGREEN TOUR</h3>
             <div class="underlinehome"></div>
             <p class="phomecard">Experience the rich sea life around Sisimiut, Greenland. This tour takes you out to see as much sea life as possible. 3 hour duration. May to October.</p>
-            <a class="homecardbtn" href="tours">Read more and book tour</a>
+            <a class="homecardbtn" href="/tours/evergreen-tour">Read more and book tour</a>
         </div></a>
 
         <a href="tours"><div class="homecard">
@@ -78,7 +82,7 @@ import Footer from '../components/Footer.astro';
             <h3 class="h3homecard">ATLANTIC WOLFFISH & HALIBUT</h3>
             <div class="underlinehome"></div>
             <p class="phomecard">In this tour you will experience traditional greenlandic fishing for the atlantic wolffish and halibut. Duration 6-8 hours. From June to September.</p>
-            <a class="homecardbtn" href="tours">Read more and book tour</a>
+            <a class="homecardbtn" href="/tours/atlantic-wolffish-and-halibut-tour">Read more and book tour</a>
         </div>
     </div></a>
 
@@ -98,7 +102,7 @@ import Footer from '../components/Footer.astro';
 <style>
 
 .hero-image-container {
-  height: 55vh;
+  height: 70vh;
   overflow: hidden;
   position: relative;
   z-index: -10;
@@ -139,7 +143,7 @@ import Footer from '../components/Footer.astro';
     color: white;
     padding: 0.1% 10%;
     margin-bottom: 5%;
-    font-family: 'Inter', sans-serif;
+    font-family: helvetica, sans-serif;
     font-weight: bold;
     font-style: italic;
 }
@@ -199,12 +203,24 @@ font-size: 2vw;
     justify-content: center; 
 }
 
+.badgediv{
+    position: relative;
+}
+
+.badge{
+    position: absolute;
+    width: 10%;
+    display: flex;
+    top: 31vw;
+    left: 71.5vw;
+}
+
 .h2home{
     display: flex;
     justify-content: center;
     margin: 0;
     margin-bottom: 0.4%;
-    font-family: 'Inter', sans-serif;
+    font-family: helvetica, sans-serif;
     font-weight: bold;
     font-style: italic;
 }
@@ -222,7 +238,7 @@ font-size: 2vw;
 
 .homecardimg{
     width: 100%;
-    height: 350px; 
+    height: 15vw; 
     object-fit: cover; 
     border-radius: 11px 11px 0 0;
     object-position: center top;
@@ -309,19 +325,23 @@ a{
 }
 }
 
-@media only screen and (min-height: 1100px) {
+@media only screen and (max-width: 1100px) {
     .hero-image-container {
-  height: 15vh;
+  height: 250px;
+}
+
+.homecardimg{
+    height: 25vw; 
 }
 
 .whitebox{
     display: grid;
     grid-template-columns: 1fr;
-    padding: 2% 25%;
+    padding: 2% 32%;
 }
 
 .homecard{
-    width: 95%;
+    width: 100%;
     margin-bottom: 10%;
 }
 
@@ -337,7 +357,7 @@ a{
 
 @media only screen and (min-width: 1920px) {
     .hero-image-container {
-  height: 45vh;
+  height: 50vh;
 }
 }
 </style>
