@@ -6,7 +6,6 @@
 body {
   margin: 0;
   padding: 0;
-  line-height: 1.5;
 }
 
 /* Hero-image start */
@@ -30,13 +29,13 @@ body {
 
 .tour-intro-container {
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  z-index: 2;
+  /* display: flex;
+  flex-direction: column; */
+  /* position: absolute; */
+  /* z-index: 2; */
   background-color: #c8102e;
-  bottom: 50px;
-  left: 60px;
+  /* bottom: 50px;
+  left: 60px; */
   color: #fff;
 }
 
@@ -62,7 +61,7 @@ body {
 .tag {
   padding: 5px 10px;
   margin-right: 10px;
-  font-size: 13px;
+  font-size: 15px;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
@@ -179,28 +178,25 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 40px 50px;
-  column-gap: 20px;
+  gap: 20px;
   align-items: center;
 }
 
-/* Bullet points */
-
-.tour-details-container ul {
-  padding-left: 1vh;
+/* Article text */
+.description-container {
+  font-size: 20px;
 }
-
-.tour-details-container li {
-  padding: 20px 0px;
-}
-
 /* Tour-details slut */
 
-/* Media queries, responsive design start */
 /* Media queries, responsive design start */
 
 /* Mobile version */
 
 @media screen and (max-width: 768px) {
+  .hero-image-container {
+    height: 40vh;
+  }
+
   .prices-container {
     display: flex;
     flex-direction: column;
@@ -218,21 +214,38 @@ body {
     background-color: #ddf4fe;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    padding: 40px 50px;
-    column-gap: 20px;
-    align-items: center;
-  }
-
-  /* Changes heading to span from 2 columns to 1 column */
-  .section-heading {
-    grid-column: span 1;
-  }
-  /* Reduces padding of heading by 25% */
-  h2 {
-    font-size: calc(30px * 0.75);
-  }
-  /* Reduces padding of paragraphs by 25% */
-  p {
-    font-size: calc(20px * 0.75);
+    padding: 50px 50px;
+    gap: 20px;
   }
 }
+
+/* Tablet verison */
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .hero-image-container {
+    height: 45vh;
+  }
+
+  .prices-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .price {
+    margin: 17.5px 0px; /* 10% more than 15px */
+  }
+
+  .price-box {
+    margin-right: 0;
+  }
+
+  .tour-details-container {
+    background-color: #ddf4fe;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 55px 55px;
+    gap: 25px;
+  }
+}
+
+/* Media queries, responsive design slut */

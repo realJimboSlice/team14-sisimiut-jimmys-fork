@@ -65,12 +65,15 @@ console.log(tour)
 			<div class="site-container">
 				<div class="hero-image-container">
 					<img src={tour.card_img_src} alt="">
+                    </div>
                         <div class="tour-intro-container">
-                            <div class="tour-location">
-                                <h1>{tour.card_location}</h1>
-                            </div>
-                            <div class="tour-name">
-                                <h2>{tour.card_name}</h2>
+                            <div class="tour-headings">
+                                <div class="tour-location">
+                                    <h1>{tour.card_location}</h1>
+                                </div>
+                                <div class="tour-name">
+                                    <h2>{tour.card_name}</h2>
+                                </div>
                             </div>
                             <div class="tag-container">
                                 <div class="tag capacity">
@@ -98,13 +101,13 @@ console.log(tour)
                 <div class="hero-followup">
                     <div class="prices-container">
                         <div class="price-box">
-                            <div class="price">1-2 people <span class="price-amount">{tour.price_one}</span></div>
+                            <div class="price">1-2 people <span class="price-amount">${tour.price_one}</span></div>
                         </div>
                         <div class="price-box">
-                            <div class="price">3 people <span class="price-amount">{tour.price_two}</span></div>
+                            <div class="price">3 people <span class="price-amount">${tour.price_two}</span></div>
                         </div>
                         <div class="price-box">
-                            <div class="price">4 people <span class="price-amount">{tour.price_three}</span></div>
+                            <div class="price">4 people <span class="price-amount">${tour.price_three}</span></div>
                         </div>
                     </div>
                     <div class="booktour-container">
@@ -113,8 +116,8 @@ console.log(tour)
                 </div>
                 <section class="tour-details-section">
                     <div class="tour-details-container">
-                        <article>
-                            <p>{tour.long_description}</p>
+                        <article class="description-container">
+                            <span>{tour.long_description}</span>
                         </article>
                         <Slideshow></Slideshow>
                     </div>
