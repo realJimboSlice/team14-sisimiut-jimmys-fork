@@ -15,7 +15,7 @@
 
   <div class="grid_1-1-1-1-1-1">
     <div class="logo">
-      <a href="home"><img
+      <a href="home"><img class="homeimg"
         alt="Sisimiut Private Boat Safari logo - a boat"
         src="https://i.ibb.co/C2rpJ9G/logo.jpg"
       /></a>
@@ -50,26 +50,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
-  
-
-.heroimg {
-  width: 100%;
-  object-fit: cover;
-  z-index: -10;
-  margin-top: 5%;
-}
-
-.herotext {
-  position: absolute;
-  top: 42%;
-  left: 51%;
-  transform: translate(-50%, -50%);
-  font-size: 2.8vw; 
-  color: #fff;
-}
 
   .tlf {
     height: 100%;
+    font-size: 1vw;
+    font-weight: bold;
     letter-spacing: -0.02em;
     line-height: 150%;
     display: flex;
@@ -84,7 +69,7 @@
   }
 
   .mon-fri {
-    font-size: 15px;
+    font-size: 1vw;
     letter-spacing: -0.02em;
     line-height: 150%;
     display: flex;
@@ -93,7 +78,6 @@
   }
 
   .phonelogo {
-    max-width: 100%;
     overflow: hidden;
     max-height: 100%;
     margin: 0 0.5%;
@@ -106,7 +90,7 @@
     padding: 0.5%;
     justify-content: center;
     position: sticky;
-  top: 0;
+    top: 0;
     }
 
   .about,
@@ -129,11 +113,45 @@
     padding-top: 5%;
   }
 
-  
-@media only screen and (max-width: 1200px) {
-  a{
-    font-size: 1.7vw;
+  .homeimg{
+    width: 12vw;
   }
+
+  
+@media only screen and (max-width: 1400px) {
+
+   a{
+    font-size: 2vw;
+  }
+
+  .phonelogo {
+    width: 2.5vw;
+  }
+
+  .tlf {
+    font-size: 1.8vw;
+  }
+
+
+  .mon-fri {
+    font-size: 1.8vw;
+  }
+
+  .stickynumber {
+    height: 3vw;
+    }
+
+ 
+}
+
+@media only screen and (max-width: 1000px) {
+
+
+
+    .some{
+      width: 80%;
+    }
+
 }
 
 </style>
