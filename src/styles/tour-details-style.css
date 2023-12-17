@@ -169,6 +169,10 @@ body {
   border: none;
 }
 
+.booktour-container a {
+  color: #fff;
+}
+
 /* Hero-followup, Priser og Booking slut */
 
 /* Tour-details start*/
