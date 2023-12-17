@@ -156,27 +156,44 @@ p {
 
 /* Mobile version */
 @media screen and (max-width: 768px) {
-
-    /* Changes grid from 2 columns to 1 columns */
-    /* Reduces padding by 25% */
     .container, .container2 {
         grid-template-columns: 1fr; 
         padding: calc(50px * 0.75);
     }
 
-    /* Changes heading to span from 2 columns to 1 column */
     .section-heading {
         grid-column: span 1;
     }
-    /* Reduces padding of heading by 25% */
     h2 {
         font-size: calc(30px * 0.75);
     }
-    /* Reduces padding of paragraphs by 25% */
     p {
         font-size: calc(20px * 0.75);
     }
 }
+
+/* Tablet version */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+.container, .container2 {
+    grid-template-columns: repeat(1, 1fr); 
+    padding: calc(50px * 0.875);
+}
+
+
+.section-heading {
+    grid-column: span 1;
+}
+/* Reduces font size of heading by 20% */
+h2 {
+    font-size: calc(30px * 0.875);
+}
+/* Reduces font size of paragraphs by 20% */
+p {
+    font-size: calc(20px * 0.875);
+}
+}
+
 
 /* Media queries, responsive design slut */
 
