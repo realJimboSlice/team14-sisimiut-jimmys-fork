@@ -22,31 +22,6 @@ export async function getStaticPaths() {
 }
 
 const {tour} = Astro.props;
-console.log(tour)
-
-
-/* 
-{
-  id: 1,
-  created_at: '2023-12-08T10:37:22.731026+00:00',
-  card_name: 'ATLANTIC WOLFFISH & HALIBUT',
-  card_location: 'Sisimiut',
-  card_description: 'In this tour you’ll experience traditional greenlandic fishing for the atlantic wolffish and halibut. Duration 6-8 hours. From June to September.',
-  card_img_src: 'https://www.boatsafari.gl/wp-content/uploads/2020/01/been-1152x1536.jpg',
-  tag_typeoftour: 'Fishing Safari',
-  tag_duration: '6-8 hours',
-  tag_capacity: '1-4 people',
-  price_one: 348,
-  long_description: 'Take a unforgettable longline fishing tour. In this tour you’ll experience traditional greenlandic fishing for the atlantic wolffish and halibut. This is a great choice if you want to catch these delicious fish, which I recommend you cook or get cooked at your accomodation.\n' +
-    'The season is from June to September, and it takes 6-8 hours.',
-  ss_img_one_src: '',
-  ss_img_two_src: '',
-  ss_img_three_src: '',
-  price_two: 404,
-  price_three: 464,
-  url_appendix: 'atlantic-wolffish-and-halibut-tour' 
-  
-  */
 
 ---
 
@@ -119,7 +94,15 @@ console.log(tour)
                         <article class="description-container">
                             <span>{tour.long_description}</span>
                         </article>
-                        <Slideshow></Slideshow>
+                        <Slideshow
+                        img1={tour.slide_img_one};
+                        img2={tour.slide_img_two};
+                        img3={tour.slide_img_three};
+                        alt1, text1={tour.slide_alt_text_one};
+                        alt2, text2={tour.slide_alt_text_two};
+                        alt3, text3={tour.slide_alt_text_three};
+                        />
+                        <!-- <Slideshow></Slideshow> -->
                     </div>
                 </section>
 			</div>
