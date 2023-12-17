@@ -4,7 +4,7 @@ const {data} = Astro.props;
 
 <div class="card-container">
     <div class="card-image-container">
-        <img class="card-image" src={data.card_img_src} alt={data.card_img_alt_text}>
+        <img class="card-image" src={data.card_img_src} width="350px" alt={data.card_img_alt_text}>
         <div class="tag type-of-tour">
             <div class="tag-text">{data.tag_typeoftour}</div>
         </div>

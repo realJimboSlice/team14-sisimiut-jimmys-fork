@@ -42,7 +42,7 @@ const {tour} = Astro.props;
 		<main>
 			<div class="site-container">
 				<div class="hero-image-container">
-					<img src={tour.card_img_src} alt="">
+					<img src={tour.card_img_src} alt={tour.card_img_alt_text} width="1280px">
                     </div>
                         <div class="tour-intro-container">
                             <div class="tour-headings">
@@ -98,9 +98,9 @@ const {tour} = Astro.props;
                             <span>{tour.long_description}</span>
                         </article>
                         <Slideshow
-                        img1={tour.slide_img_one};
-                        img2={tour.slide_img_two};
-                        img3={tour.slide_img_three};
+                        img1={tour.slide_img_one} width="580px";
+                        img2={tour.slide_img_two} width="580px";
+                        img3={tour.slide_img_three} width="580px";
                         alt1, text1={tour.slide_alt_text_one};
                         alt2, text2={tour.slide_alt_text_two};
                         alt3, text3={tour.slide_alt_text_three};
