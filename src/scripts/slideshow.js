@@ -1,7 +1,5 @@
 let slideIndex = 0;
 let timer;
-let startX = 0;
-let endX = 0;
 
 // The function that starts the slideshow
 function startSlideshow() {
