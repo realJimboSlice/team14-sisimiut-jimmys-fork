@@ -55,9 +55,14 @@ body {
 .filters-container select {
   padding: 8px;
   margin-right: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #fff;
   border-radius: 4px;
   font-size: 16px;
+}
+
+.filters-container select:hover {
+  border-color: #0a1d37;
+  cursor: pointer;
 }
 
 .filters-container button {
