@@ -70,6 +70,8 @@ import "../styles/tours-overview-style.css";
 			</div>
 		<Footer></Footer>
 		<script>
+			
+			// Apply Filters
 			document.getElementById('applyFilters').addEventListener('click', function() {
 				// Variables
 				const durationFilter = document.getElementById('durationFilter').value;
@@ -112,6 +114,7 @@ import "../styles/tours-overview-style.css";
 				});
 			});
 
+			// Clear Filters
 			document.getElementById('clearFilters').addEventListener('click', function() {
        		 // Clear all filter dropdowns
 				document.getElementById('typeFilter').value = '';
