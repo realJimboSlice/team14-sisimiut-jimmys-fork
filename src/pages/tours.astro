@@ -40,12 +40,93 @@ import "../styles/tours-overview-style.css";
 						<div class="tour-section-heading">
 							<h1>Choose diverse guided tours for personalized experiences</h1>
 						</div>
+						<div class="filters-container">
+							<select id="typeFilter">
+								<option value="">Select Tour Type</option>
+								<option value="Boat Safari">Boat Safari</option>
+								<option value="Fishing Safari">Fishing Safari</option>
+								<option value="Guided Tour">Guided Tour</option>
+							</select>
+							<select id="durationFilter">
+								<option value="">Select Duration</option>
+								<option value="1">1-2 hours</option>
+								<option value="3">3-4 hours</option>
+								<option value="5">5+ hours</option>
+							</select>
+							<select id="locationFilter">
+								<option value="">Select Location</option>
+								<option value="Sisimiut">Sisimiut</option>
+								<option value="Assaqutaq">Assaqutaq</option>
+							</select>
+							<button id="applyFilters">Apply Filters</button>
+							<button id="clearFilters">Clear Filters</button>
+						</div>
+						
 						<div class="all-cards-container">
 							{data.map(tours=>{return <Tour_card data={tours} />})}
 						</div>
 					</section>
 				</main>
 			</div>
-		<Footer></Footer>	
+		<Footer></Footer>
+		<script>
+			document.getElementById('applyFilters').addEventListener('click', function() {
+				// Variables
+				const durationFilter = document.getElementById('durationFilter').value;
+				const locationFilter = document.getElementById('locationFilter').value;
+				const typeFilter = document.getElementById('typeFilter').value;
+				const cards = document.querySelectorAll('.card-container');
+				
+				// Loop through each card 
+				cards.forEach(card => {
+					const durationText = card.querySelector('.duration .tag-text').textContent.trim();
+					const duration = parseInt(durationText); // Extract the numeric part
+					const location = card.querySelector('.content-heading-1 h2').textContent.trim();
+					const type = card.querySelector('.type-of-tour .tag-text').textContent.trim();
+					
+					// Default to show the card
+					let showCard = true;
+
+					if (typeFilter && type !== typeFilter) {
+						showCard = false;
+					}
+		
+					// Adjusted duration filter logic
+					if (durationFilter) {
+						const filterValue = parseInt(durationFilter);
+						if (filterValue === 1 && (duration < 1 || duration > 2)) {
+							showCard = false;
+						} else if (filterValue === 3 && (duration < 3 || duration > 4)) {
+							showCard = false;
+						} else if (filterValue === 5 && duration <= 5) {
+							showCard = false;
+						}
+					}
+		
+					if (locationFilter && location !== locationFilter) {
+						showCard = false;
+					}
+
+					// Show or hide the card
+					card.style.display = showCard ? '' : 'none';
+				});
+			});
+
+			document.getElementById('clearFilters').addEventListener('click', function() {
+       		 // Clear all filter dropdowns
+				document.getElementById('typeFilter').value = '';
+        		document.getElementById('durationFilter').value = '';
+        		document.getElementById('locationFilter').value = '';
+        
+        		// Show all cards
+        		const cards = document.querySelectorAll('.card-container');
+        		cards.forEach(card => {
+            		card.style.display = '';
+        		});
+    		});
+		
+		</script>
+		
+		
 	</body>
 </html>
