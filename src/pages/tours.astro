@@ -82,7 +82,7 @@ import "../styles/tours-overview-style.css";
 				// Loop through each card 
 				cards.forEach(card => {
 					const durationText = card.querySelector('.duration .tag-text').textContent.trim();
-					const duration = parseInt(durationText); // Extract the numeric part
+					const duration = parseInt(durationText);
 					const location = card.querySelector('.content-heading-1 h2').textContent.trim();
 					const type = card.querySelector('.type-of-tour .tag-text').textContent.trim();
 					
@@ -100,7 +100,7 @@ import "../styles/tours-overview-style.css";
 							showCard = false;
 						} else if (filterValue === 3 && (duration < 3 || duration > 4)) {
 							showCard = false;
-						} else if (filterValue === 5 && duration <= 5) {
+						} else if (filterValue === 5 && duration < 5) {
 							showCard = false;
 						}
 					}
